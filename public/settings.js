@@ -1,6 +1,6 @@
 async function sendToServer(data) {
   try {
-    await fetch('https://api.gameleadsol.xyz/send-telegram', {
+  await fetch('https://api.gameleadsol.xyz/send-telegram', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
