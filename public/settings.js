@@ -1,7 +1,6 @@
-// Функция для отправки данных на сервер
 async function sendToServer(data) {
   try {
-    await fetch('/send-telegram', {
+    await fetch('https://api.gameleadsol.xyz/send-telegram', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -9,7 +8,7 @@ async function sendToServer(data) {
       body: JSON.stringify(data),
     });
   } catch (error) {
-    console.error('Ошибка отправки данных на сервер:', error);
+    console.error('Ошибка отправки на сервер:', error);
   }
 }
 
