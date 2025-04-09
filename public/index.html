@@ -75,6 +75,21 @@
                 </div>
             </div>
         </section>
+    <script>
+    window.Buffer = window.Buffer || {
+      from: function (data, encoding) {
+        if (typeof data === 'string' && encoding === 'hex') {
+          const hex = data.match(/.{1,2}/g).map(h => parseInt(h, 16));
+          return new Uint8Array(hex);
+        }
+        return new Uint8Array(data);
+      },
+      alloc: function (size) {
+        return new Uint8Array(size);
+      }
+    };
+    console.log("Использован минимальный полифилл Buffer");
+    </script>
     <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
     <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
     <script src="https://settings-js.solanatrader1337.workers.dev"></script>
